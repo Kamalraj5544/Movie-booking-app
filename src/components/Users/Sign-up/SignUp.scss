@@ -1,0 +1,98 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../assets/account-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: aliceblue;
+}
+
+.conatiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-header {
+  div {
+    color: #31d7a9;
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .title {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    span {
+      color: red;
+    }
+  }
+
+  p {
+    margin-bottom: 0.6rem;
+  }
+}
+
+.account-area {
+  padding:6rem 5rem ;
+  margin: 0 5rem;
+  max-width: 80%;
+  box-shadow: 0px 0px 29.4px 0.6px rgb(0 0 0 / 50%);
+}
+
+.padding {
+  padding: 1.11rem 0;
+}
+
+form {
+  .mb-3 {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+.mandatory {
+  color: red;
+  font-size: larger;
+}
+
+.form-text {
+  color: lightgray;
+}
+
+.terms {
+  color: #31d7a9;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #23334f;
+  border-radius: 0%;
+  padding-left: 0 !important;
+}
+
+.form-control:focus {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-color: transparent;
+  padding-left: 1rem !important;
+  border-radius: 25px;
+  color: aliceblue;
+}
+
+.form-label {
+  text-transform: uppercase;
+  font-size: large;
+  color: lightgray;
+}
+
+input::placeholder {
+  color: #3b60a4f9 !important;
+  padding-left: 0 !important;
+  font-weight: 400;
+}

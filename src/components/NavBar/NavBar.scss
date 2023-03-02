@@ -1,0 +1,66 @@
+.container-fluid {
+  padding: 0;
+}
+
+.navbar-bg {
+  background-color: #0a1e5e !important;
+  height: 100px;
+}
+
+.logo {
+  width: 75%;
+  max-width: 100%;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  margin-right: 0;
+}
+
+.nav-link {
+  color: aliceblue !important;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem;
+  padding-top: 0.75rem;
+
+  @media screen and (max-width: 992px) {
+    border-bottom: 1px solid lightgray;
+  }
+}
+
+.nav-item {
+  background-color: #0a1e5e !important;
+}
+
+.justify-evenly{
+  width: 70%;
+  display: flex ;
+  justify-content: space-evenly;
+}
+
+.navbar-toggler {
+  background-color: aliceblue !important;
+}
+
+.join-btn {
+  background-image: -webkit-linear-gradient(
+    150deg,
+    #5560ff 18%,
+    #aa52a1 63%,
+    #ff4343 100%
+  );
+  border-radius: 25px;
+  border: 0;
+  color: aliceblue !important;
+  padding: 8px 45px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  
+  @media screen and (max-width: 992px) {
+    width: 45%;
+  }
+}
