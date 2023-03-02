@@ -56,11 +56,16 @@
   border-radius: 25px;
   border: 0;
   color: aliceblue !important;
-  padding: 8px 45px;
+  padding: 0.5rem;
   font-size: 1.25rem;
   font-weight: 600;
+  width: 10rem;
   
   @media screen and (max-width: 992px) {
-    width: 45%;
+    width: 80%;
   }
+}
+
+.join-btn:hover{
+  box-shadow: 0 0 20px 1px rgba(41, 225, 136, 0.863);
 }

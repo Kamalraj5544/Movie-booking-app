@@ -1,21 +1,21 @@
 .wrapper {
-  width: 100%;
-  height: 100%;
   background-image: url("../../../assets/account-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   color: aliceblue;
+  overflow: hidden;
 }
 
 .conatiner {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .account-header {
-  div {
+  .teal {
     color: #31d7a9;
     font-size: 1.4rem;
     margin-bottom: 0.3rem;
@@ -36,14 +36,12 @@
 }
 
 .account-area {
-  padding:6rem 5rem ;
-  margin: 0 5rem;
-  max-width: 80%;
+  padding:4rem 3.5rem ;
+  margin: 1rem 4rem !important;
+  width: 100% ;
+  max-width: 500px;
+  max-height: 690px;
   box-shadow: 0px 0px 29.4px 0.6px rgb(0 0 0 / 50%);
-}
-
-.padding {
-  padding: 1.11rem 0;
 }
 
 form {
@@ -95,4 +93,8 @@ input::placeholder {
   color: #3b60a4f9 !important;
   padding-left: 0 !important;
   font-weight: 400;
+}
+
+.login-section{
+    margin-top: 1.2rem;
 }
