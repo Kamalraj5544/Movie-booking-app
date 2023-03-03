@@ -3,7 +3,7 @@ import "./SignUp.scss";
 const SignUp = () => {
   return (
     <div className="wrapper">
-      <div className="conatiner">
+      <div className="box-container">
         <div className="account-area">
           <div className="account-header text-center">
             <div className="teal">WELCOME</div>
@@ -58,9 +58,9 @@ const SignUp = () => {
                   id="exampleCheck1"
                 />
                 <label className="form-check-label" for="exampleCheck1">
-                  I Agree To <a className="terms">The Terms, Privacy Policy</a>{" "}
-                  And
-                  <a className="terms"> Fees</a>
+                  I Agree To The
+                  <a className="teal-color"> Terms, Privacy Policy</a> And
+                  <a className="teal-color"> Fees</a>
                 </label>
               </div>
               <div className="text-center">
@@ -68,7 +68,10 @@ const SignUp = () => {
                   SIGN UP
                 </button>
                 <div className="login-section">
-                  Already have a account? <a className="terms" href="/signin">Login</a>
+                  Already have a account?{" "}
+                  <a className="teal-color" href="/signin">
+                    Login
+                  </a>
                 </div>
               </div>
             </form>

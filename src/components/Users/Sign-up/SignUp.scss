@@ -2,12 +2,12 @@
   background-image: url("../../../assets/account-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   color: aliceblue;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
-.conatiner {
+.box-container {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -36,9 +36,9 @@
 }
 
 .account-area {
-  padding:4rem 3.5rem ;
+  padding: 4rem 3.5rem;
   margin: 1rem 4rem !important;
-  width: 100% ;
+  width: 100%;
   max-width: 500px;
   max-height: 690px;
   box-shadow: 0px 0px 29.4px 0.6px rgb(0 0 0 / 50%);
@@ -59,7 +59,7 @@ form {
   color: lightgray;
 }
 
-.terms {
+.teal-color {
   color: #31d7a9;
   text-decoration: none;
   cursor: pointer;
@@ -89,12 +89,16 @@ form {
   color: lightgray;
 }
 
+.form-check-label {
+  color: #3b60a4f9 !important;
+}
+
 input::placeholder {
   color: #3b60a4f9 !important;
   padding-left: 0 !important;
   font-weight: 400;
 }
 
-.login-section{
-    margin-top: 1.2rem;
+.login-section {
+  margin-top: 1.2rem;
 }

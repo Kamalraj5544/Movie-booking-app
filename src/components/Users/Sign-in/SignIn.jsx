@@ -3,7 +3,7 @@ import "./SignIn.scss";
 const SignIn = () => {
   return (
     <div className="wrapper">
-      <div className="conatiner">
+      <div className="box-container">
         <div className="account-area">
           <div className="account-header text-center">
             <div className="teal">HELLO</div>
@@ -55,7 +55,7 @@ const SignIn = () => {
                   SIGN IN
                 </button>
                 <div className="login-section">
-                  Don't have a account? <a className="terms">Sign up now</a>
+                  Don't have a account? <a className="teal-color" href="/signup">Sign up now</a>
                 </div>
               </div>
             </form>
