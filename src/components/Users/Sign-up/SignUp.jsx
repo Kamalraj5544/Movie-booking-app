@@ -68,7 +68,7 @@ const SignUp = () => {
                   SIGN UP
                 </button>
                 <div className="login-section">
-                  Already have a account? <a className="terms">Login</a>
+                  Already have a account? <a className="terms" href="/signin">Login</a>
                 </div>
               </div>
             </form>
