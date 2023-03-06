@@ -10,15 +10,11 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0.17;
+  z-index: -5;
+  opacity: 0.17;  
 }
 
 .textcontainer {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,12 +22,14 @@
   flex-wrap: wrap;
   padding: 15rem 0 6rem 0;
   width: 100%;
+  
 
   .cover-header {
     text-align: center;
     font-size: 5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+    opacity: 1 !important;
 
     @media screen and (max-width: 992px) {
       font-size: 3.5rem;
