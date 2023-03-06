@@ -1,15 +1,17 @@
 import NavBar from "../../../components/NavBar/NavBar";
 import Cover from "../Cover/Cover";
-import "./Home.scss"
+import SearchPanel from "../SearchPanel/SearchPanel";
+import "./Home.scss";
 
 const Home = () => {
   return (
-    <>
-    <NavBar />
-      <div className="homeContainer">
+    <div>
+      <NavBar />
+      <div>
         <Cover />
       </div>
-    </>
+      <SearchPanel />
+    </div>
   );
 };
 

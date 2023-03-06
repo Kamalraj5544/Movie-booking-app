@@ -1,11 +1,6 @@
-.coverContainer::before {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(0, 18, 50, 0.4);
-  z-index: 2;
-}
+// .coverContainer{
+//   position: relative;
+// }
 
 .bg-img {
   background-image: url("../../../assets/cover-bg.jpg");
@@ -19,7 +14,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  opacity: 0.2;
+  opacity: 0.17;
 }
 
 .textcontainer {
