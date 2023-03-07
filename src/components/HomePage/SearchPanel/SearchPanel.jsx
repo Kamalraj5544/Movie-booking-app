@@ -21,7 +21,7 @@ const SearchPanel = () => {
 
   return (
     <div className="search-ticket-section">
-      <div className="container">
+      <div className="search-container">
         <div className="search-section-bgImg"></div>
         <div className="search-header text-center">
           <p className="welcome-section">
@@ -30,7 +30,7 @@ const SearchPanel = () => {
             <span className="red-color">MY</span> TICKE
             <span className="red-color">T</span> */}
           </p>
-          <p>WHAT ARE YOU LOOKING FOR</p>
+          <p className="desc">WHAT ARE YOU LOOKING FOR</p>
         </div>
         <div className="search-box container">
           <form className="form-container">
@@ -41,29 +41,35 @@ const SearchPanel = () => {
                   placeholder="Search for Movies"
                   className="input-box"
                 />
-                <span>
+                <span className="search-icon">
                   <BsSearch />
                 </span>
               </div>
             </div>
             <div className="form-group">
-              <Dropdown
-                value={selectedCity}
-                onChange={(e) => setSelectedCity(e.value)}
-                options={cities}
-                optionLabel="name"
-                placeholder="Select a City"
-                className="w-full md:w-14rem "
-              />
+              <span className="teal-color">City:</span>
+              <div className="city-dropDown">
+                <Dropdown
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.value)}
+                  options={cities}
+                  optionLabel="name"
+                  placeholder="Select a City"
+                  className="w-full "
+                />
+              </div>
             </div>
             <div className="form-group ">
-              <Calendar
-                value={date}
-                placeholder="Select a Date"
-                onChange={(e) => setDate(e.value)}
-                showIcon
-                className="w-full md:w-14rem"
-              />
+              <span className="teal-color">Date:</span>
+              <div className="date-dropDown">
+                <Calendar
+                  value={date}
+                  placeholder="Select a Date"
+                  onChange={(e) => setDate(e.value)}
+                  showIcon
+                  className="w-full md:w-14rem"
+                />
+              </div>
             </div>
           </form>
         </div>

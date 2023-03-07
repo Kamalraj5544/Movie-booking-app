@@ -5,12 +5,14 @@ import "./Home.scss";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home-container">
       <NavBar />
-      <div>
-        <Cover />
-      </div>
+      <div className="bg-img"></div> 
+      <div className="container">
+      <Cover />
       <SearchPanel />
+      </div>
+      
     </div>
   );
 };
