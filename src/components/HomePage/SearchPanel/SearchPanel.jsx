@@ -2,6 +2,7 @@ import "./SearchPanel.scss";
 
 import { Dropdown } from "primereact/dropdown";
 import { Calendar } from "primereact/calendar";
+import { InputText } from "primereact/inputtext";
 
 import { useState } from "react";
 
@@ -36,18 +37,22 @@ const SearchPanel = () => {
           <form className="form-container">
             <div className="form-group">
               <div className="search-input">
-                <input
+                {/* <input
                   type="text"
                   placeholder="Search for Movies"
                   className="input-box"
                 />
                 <span className="search-icon">
                   <BsSearch />
+                </span> */}
+                <span className="p-input-icon-left">
+                  <i className="pi pi-search" />
+                  <InputText placeholder="Search for Movies" />
                 </span>
               </div>
             </div>
             <div className="form-group">
-              <span className="teal-color">City:</span>
+              <span className="teal-color form-header">City:</span>
               <div className="city-dropDown">
                 <Dropdown
                   value={selectedCity}
@@ -55,19 +60,20 @@ const SearchPanel = () => {
                   options={cities}
                   optionLabel="name"
                   placeholder="Select a City"
-                  className="w-full "
+                  className="md:w-11rem"
                 />
               </div>
             </div>
             <div className="form-group ">
-              <span className="teal-color">Date:</span>
+              <span className="teal-color form-header">Date:</span>
               <div className="date-dropDown">
                 <Calendar
                   value={date}
                   placeholder="Select a Date"
                   onChange={(e) => setDate(e.value)}
-                  showIcon
-                  className="w-full md:w-14rem"
+                  // showIcon
+                  touchUI
+                  className="md:w-11rem"
                 />
               </div>
             </div>

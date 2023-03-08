@@ -12,3 +12,29 @@ body {
   font-family: "Open Sans", sans-serif;
   background: #001232;
 }
+
+/* .p-dropdown {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.p-calendar {
+  border: none !important;
+  background:#001232 !important;
+} */
+
+.p-component {
+  border: none !important;
+  background: #001232 !important;
+  color: #ffffff !important;
+}
+
+.p-placeholder {
+  color: rgb(61, 142, 235) !important;
+  /* font-size: medium;
+  font-weight: 300 !important;  */
+}
+
+.p-inputtext{
+color: #ffffff;
+}
