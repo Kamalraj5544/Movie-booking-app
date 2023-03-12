@@ -34,7 +34,7 @@ const MoviePanel = () => {
         <div className="row card-container">
           {movies.map((movie) => (
             <div className="col-md-3 moviecard" key={movie.id}>
-              <MovieCard title={movie.name} movieImg={movie.posterUrl} />
+              <MovieCard movie={movie} />
             </div>
           ))}
         </div>

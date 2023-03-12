@@ -41,16 +41,21 @@ body {
 
 .p-card-body {
   background-color: #032055;
-  
 }
 
-
 .p-card-title {
-  margin: .5rem 0 !important;
+  margin: 0.5rem 0 !important;
   font-size: 1.2rem !important;
 }
 
 .p-card-header {
   border-radius: 7px 7px 5px 5px;
   overflow: hidden;
+}
+
+.p-card-header img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: ease-in;
+  transition-duration: 100ms;
 }
