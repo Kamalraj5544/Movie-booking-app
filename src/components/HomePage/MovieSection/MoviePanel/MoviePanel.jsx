@@ -33,9 +33,9 @@ const MoviePanel = () => {
         </div>
         <div className="row card-container">
           {movies.map((movie) => (
-            <div className="col-md-3 moviecard" key={movie.id}>
+            <a className="col-md-3 moviecard" key={movie.id} href="/movie">
               <MovieCard movie={movie} />
-            </div>
+            </a>
           ))}
         </div>
       </div>
