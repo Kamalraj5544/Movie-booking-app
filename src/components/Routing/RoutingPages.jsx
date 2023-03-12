@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../HomePage/Home/Home";
-import MovieDetailsHome from "../MovieDetails/MovieDetailsHome/MovieDetailsHome";
+import HomeMd from "../MovieDetails/HomeMD/HomeMd";
 import SignIn from "../Users/Sign-in/SignIn";
 import SignUp from "../Users/Sign-up/SignUp";
 
@@ -11,7 +11,7 @@ const RouteingPages = () => {
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/movie" element={<MovieDetailsHome />} />
+        <Route path="/movie" element={<HomeMd />} />
       </Routes>
     </Router>
   );
