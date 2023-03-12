@@ -35,6 +35,22 @@ body {
   font-weight: 300 !important;  */
 }
 
-.p-inputtext{
-color: #ffffff;
+.p-inputtext {
+  color: #ffffff;
+}
+
+.p-card-body {
+  background-color: #032055;
+  
+}
+
+
+.p-card-title {
+  margin: .5rem 0 !important;
+  font-size: 1.2rem !important;
+}
+
+.p-card-header {
+  border-radius: 7px 7px 5px 5px;
+  overflow: hidden;
 }

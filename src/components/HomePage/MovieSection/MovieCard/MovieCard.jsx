@@ -1,6 +1,6 @@
 import { Card } from "primereact/card";
 
-import "./MovieCard.scss"
+import "./MovieCard.scss";
 
 const MovieCard = ({ title, movieImg }) => {
   const header = <img src={movieImg} alt="Alone Movie Image" />;
@@ -9,7 +9,7 @@ const MovieCard = ({ title, movieImg }) => {
       <hr />
       <div className="footer-card">
         <div>
-          <img src="https://pixner.net/boleto/demo/assets/images/movie/tomato.png" />
+          <img src="https://pixner.net/boleto/demo/assets/images/movie/tomato.png" className="card-image" />
           &nbsp;&nbsp;
           <span>88%</span>
         </div>

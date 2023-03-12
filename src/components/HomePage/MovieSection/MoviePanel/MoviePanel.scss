@@ -1,0 +1,30 @@
+.movie-grid {
+  padding-top: 5rem;
+}
+
+.moviecard {
+  padding: 1rem;
+}
+
+.movie-card:hover {
+  transform: scale(1.1);
+}
+
+.movie-grid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.btn-header {
+  margin: 1rem;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  line-height: 60px;
+}
