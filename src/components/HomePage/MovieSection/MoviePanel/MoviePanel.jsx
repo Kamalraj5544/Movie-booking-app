@@ -29,11 +29,11 @@ const MoviePanel = () => {
         </div>
 
         <div className="flex flex-wrap justify-content-center gap-3">
-          <button className="join-btn">NOW SHOWING</button>
+          <button className="custom-btn">NOW SHOWING</button>
 
-          <button className="join-btn">COMING SOON</button>
+          <button className="custom-btn">COMING SOON</button>
 
-          <button className="join-btn">EXCLUSIVE</button>
+          <button className="custom-btn">EXCLUSIVE</button>
         </div>
         <div className="row card-container">
           {movies.map((movie) => (

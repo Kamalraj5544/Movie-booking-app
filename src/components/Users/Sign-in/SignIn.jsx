@@ -51,7 +51,7 @@ const SignIn = () => {
                 </div>
               </div>
               <div className="text-center">
-                <button type="submit" className="btn join-btn">
+                <button type="submit" className="btn custom-btn">
                   SIGN IN
                 </button>
                 <div className="login-section">

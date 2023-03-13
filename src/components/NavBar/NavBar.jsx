@@ -42,7 +42,7 @@ const NavBar = () => {
               </li>
             </ul>
             <div className="d-grid d-md-flex">
-              <a className="btn me-md-2 join-btn" type="button" href="/signup">
+              <a className="btn me-md-2 custom-btn" type="button" href="/signup">
                 JOIN US
               </a>
             </div>

@@ -4,8 +4,11 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
+import tomato from "../../../assets/Movies/tomato.png";
+import cake from "../../../assets/Movies/cake.png";
+
 const CoverMD = () => {
-  const [movie, setMovie] = useState({})
+  const [movie, setMovie] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
@@ -28,31 +31,61 @@ const CoverMD = () => {
             <div className="bold movie-name">{movie.name}</div>
             <div className="movie-lang">
               {movie.languages &&
-                movie.languages.map((language,index) => (
-                  <span key={index+language}>{language} {index !== movie.languages.length-1 ? " , " : ""}</span>
+                movie.languages.map((language, index) => (
+                  <span key={index + language}>
+                    {language}{" "}
+                    {index !== movie.languages.length - 1 ? " , " : ""}
+                  </span>
                 ))}
             </div>
             <div className="movie-genre">
-            {
-              movie.genre && movie.genre.map((g,index) => (
-                <button className="movie-genre-btn" key={index}>{g}</button>
-              ))
-            }
-             
+              {movie.genre &&
+                movie.genre.map((g, index) => (
+                  <button className="movie-genre-btn" key={index}>
+                    {g}
+                  </button>
+                ))}
             </div>
             <div className="date-time">
               <span className="release-date">
                 <span className="pi pi-calendar"></span> {movie.dateOfRelease}
               </span>
               <span className="duration">
-                <span className="pi pi-clock"></span>{movie.duration} mins
+                <span className="pi pi-clock"></span>
+                {movie.duration} mins
               </span>
             </div>
           </div>
         </div>
       </div>
       <div className="book-section">
-        <div className="container col-offset-4"></div>
+        <div className="book-section-container">
+          <div className="detail-items">
+            <div className="tomato">
+              <div className="item-header">
+                <img src={tomato} />
+                <span>{movie.rating}</span>
+              </div>
+              <div>Tomatometer</div>
+            </div>
+            <div className="audience">
+              <div className="item-header">
+                <img src={cake} />
+                <span>{movie.rating}</span>
+              </div>
+              <div>Audience Score</div>
+            </div>
+            <div className="user-rating">
+              <div>User Rating</div>
+            </div>
+            <div className="rate-it">
+              <div>Rate It</div>
+            </div>
+          </div>
+          <div>
+            <button className="custom-btn">book tickets</button>
+          </div>
+        </div>
       </div>
     </section>
   );
