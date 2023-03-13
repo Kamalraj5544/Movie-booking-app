@@ -28,6 +28,10 @@
   display: block;
 }
 
+.movie-img:hover{
+  transform: scale(1.08);
+}
+
 .movie-lang {
   margin-bottom: 21px;
   text-transform: uppercase;
