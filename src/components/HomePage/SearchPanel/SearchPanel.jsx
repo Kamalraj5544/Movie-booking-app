@@ -21,7 +21,7 @@ const SearchPanel = () => {
   const [date, setDate] = useState(null);
 
   return (
-    <div className="search-ticket-section">
+    <div className="search-ticket-section" id="search-section">
       <div className="search-container">
         <div className="search-section-bgImg"></div>
         <div className="search-header text-center">

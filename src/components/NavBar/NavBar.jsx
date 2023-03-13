@@ -28,17 +28,17 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 justify-evenly">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link active" aria-current="page" href="/">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Contacts
+                <a className="nav-link" href="#search-section">
+                  Search
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Movies</a>
+                <a className="nav-link" href="#movies-section">Movies</a>
               </li>
             </ul>
             <div className="d-grid d-md-flex">

@@ -14,7 +14,7 @@ const MoviePanel = () => {
   }, []);
 
   return (
-    <div className="movie-grid">
+    <div className="movie-grid" id="movies-section">
       <div className="movie-grid-header flex flex-wrap gap-3">
         <div>
           <div className="bold">MOVIES</div>
