@@ -29,7 +29,10 @@ const CoverMD = () => {
           </div>
         </div>
       </div>
-      <div className="book-section"></div>
+      <div className="book-section">
+        <div className="container col-offset-4">
+        </div>
+      </div>
     </section>
   );
 };

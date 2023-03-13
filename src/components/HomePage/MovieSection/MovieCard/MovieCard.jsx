@@ -2,7 +2,7 @@ import { Card } from "primereact/card";
 
 import "./MovieCard.scss";
 
-const MovieCard = ({ movie}) => {
+const MovieCard = ({ movie }) => {
   const header = <img src={movie.posterUrl} alt={movie.name + "image"} />;
   return (
     <Card title={movie.name} header={header} className="w-full">

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import MovieCard from "../MovieCard/MovieCard";
 
@@ -7,10 +8,13 @@ import "./MoviePanel.scss";
 
 const MoviePanel = () => {
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate();
+
   useEffect(() => {
-    axios
-      .get("http://localhost:4000/api/movie")
-      .then((response) => setMovies(response.data));
+    axios.get("http://localhost:4000/api/movie").then((response) => {
+      setMovies(response.data);
+      // console.log(response.data);
+    });
   }, []);
 
   return (
@@ -33,7 +37,11 @@ const MoviePanel = () => {
         </div>
         <div className="row card-container">
           {movies.map((movie) => (
-            <a className="col-md-3 moviecard" key={movie.id} href="/movie">
+            <a
+              className="col-md-3 moviecard"
+              key={movie.id}
+              onClick={() => navigate("/movie/" + movie._id)}
+            >
               <MovieCard movie={movie} />
             </a>
           ))}
