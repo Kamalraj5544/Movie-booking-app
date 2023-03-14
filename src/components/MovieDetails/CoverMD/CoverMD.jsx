@@ -64,14 +64,14 @@ const CoverMD = () => {
             <div className="tomato">
               <div className="item-header">
                 <img src={tomato} />
-                <span>{movie.rating}</span>
+                <span>88%</span>
               </div>
               <p className="flex justify-content-center">Tomatometer</p>
             </div>
             <div className="audience">
               <div className="item-header">
                 <img src={cake} />
-                <span>{movie.rating}</span>
+                <span>92%</span>
               </div>
               <div className="flex justify-content-center">Audience Score</div>
             </div>

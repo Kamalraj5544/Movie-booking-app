@@ -39,7 +39,7 @@ const MoviePanel = () => {
           {movies.map((movie) => (
             <a
               className="col-md-3 moviecard"
-              key={movie.id}
+              key={movie._id}
               onClick={() => navigate("/movie/" + movie._id)}
             >
               <MovieCard movie={movie} />

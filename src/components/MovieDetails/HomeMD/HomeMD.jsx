@@ -1,21 +1,18 @@
-import axios from "axios"
+import NavBar from "../../NavBar/NavBar";
+import CoverMD from "../CoverMD/CoverMD";
+import UserReview from "../UserReview/UserReview";
 
-import { useState,useEffect } from "react"
-import { useParams } from "react-router-dom"
-
-import NavBar from "../../NavBar/NavBar"
-import CoverMD from "../CoverMD/CoverMD"
-
-import "./HomeMD.scss"
+import "./HomeMD.scss";
 
 const HomeMd = () => {
 
   return (
     <div>
-        <NavBar />
-        <CoverMD />
+      <NavBar />
+      <CoverMD />
+      <UserReview />
     </div>
-  )
-}
+  );
+};
 
-export default HomeMd
+export default HomeMd;
