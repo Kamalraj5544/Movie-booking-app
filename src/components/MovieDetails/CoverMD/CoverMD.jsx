@@ -27,7 +27,7 @@ const CoverMD = () => {
           <div>
             <img src={movie.posterUrl} className="movie-img" />
           </div>
-          <div className="details-content col-offset-3">
+          <div className="details-movie-content">
             <div className="bold movie-name">{movie.name}</div>
             <div className="movie-lang">
               {movie.languages &&
@@ -66,25 +66,43 @@ const CoverMD = () => {
                 <img src={tomato} />
                 <span>{movie.rating}</span>
               </div>
-              <div>Tomatometer</div>
+              <p className="flex justify-content-center">Tomatometer</p>
             </div>
             <div className="audience">
               <div className="item-header">
                 <img src={cake} />
                 <span>{movie.rating}</span>
               </div>
-              <div>Audience Score</div>
+              <div className="flex justify-content-center">Audience Score</div>
             </div>
             <div className="user-rating">
-              <div>User Rating</div>
+              <div className="item-header">
+                <span>4.5</span>
+                <div className="rated">
+                  <i className="pi pi-heart-fill"></i>
+                  <i className="pi pi-heart-fill"></i>
+                  <i className="pi pi-heart-fill"></i>
+                  <i className="pi pi-heart-fill"></i>
+                  <i className="pi pi-heart-fill"></i>
+                </div>
+              </div>
+              <div className="flex justify-content-center">User Rating</div>
             </div>
-            <div className="rate-it">
-              <div>Rate It</div>
+            <div className="rate">
+              <div className="item-header">
+                <div className="rate-it">
+                  <i className="pi pi-heart-fill"></i>
+                  <i className="pi pi-heart-fill"></i>
+                  <i className="pi pi-heart-fill"></i>
+                  <i className="pi pi-heart-fill"></i>
+                  <i className="pi pi-heart-fill"></i>
+                </div>
+                <span className="margin-left">0.0</span>
+              </div>
+              <div className="flex justify-content-center">Rate It</div>
             </div>
           </div>
-          <div>
-            <button className="custom-btn">book tickets</button>
-          </div>
+          <button className="custom-btn book-btn">book tickets</button>
         </div>
       </div>
     </section>
