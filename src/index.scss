@@ -55,6 +55,36 @@ body {
   }
 }
 
+ .p-tabview-nav  ,.p-tabview-nav-link {
+  background-color: #001232 !important;
+  color: #31d7a9 !important;
+  // text-transform: uppercase;
+}
+
+.p-tabview .p-tabview-panels {
+  background-color: #001232 !important;
+  color: #ffffff;
+}
+
+.p-tabview .p-tabview-nav {
+  border: 1px solid #11326f;
+  border-width: 2px 0 2px 0;
+}
+
+
+ .p-tabview-ink-bar{
+  background-color: #31d7a9 !important; 
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus{
+  box-shadow: none;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link{
+  border:  1px solid #11326f;
+  border-width: 0 0 2px 0;
+}
+
 /* .p-button {
   background-color: transparent;
   border: 1px solid rgba(163, 177, 198, 0.2);
