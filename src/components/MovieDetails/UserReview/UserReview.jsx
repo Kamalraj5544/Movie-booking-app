@@ -25,40 +25,42 @@ const UserReview = () => {
     <div className="container">
       <TabView>
         <TabPanel header="Summary">
-          <h2>Description</h2>
-          <p>{movie.description}</p>
+          <h3 className="pb-3 uppercase">Description</h3>
+          <p className="lightBlue">{movie.description}</p>
 
-          <div className="flex">
-            <h3>IMDB Rating</h3>
-            <h3> - {movie.rating}</h3>
+          <div className="flex uppercase">
+            <h3 className="m-0 mt-1">IMDB Rating</h3>
+            <h4 className="m-0 mt-1 ml-2 lightBlue teal-color">
+              - {movie.rating}/10
+            </h4>
           </div>
         </TabPanel>
         <TabPanel header="User review(87)">
           {movie.userReviews &&
             movie.userReviews.map((review, i) => (
               <div
-                className="user-review-container flex flex-wrap"
+                className="user-review-container flex flex-wrap border-bottom-1 pb-4 pt-5"
                 key={i + review}
               >
-                <div className="user-details-container">
-                  <div className="user-img">
+                <div className="user-details-container flex flex-wrap">
+                  <div className="user-img pr-6">
                     <Avatar
                       image={review.userProfilePicUrl}
                       size="xlarge"
                       shape="circle"
                     />
                   </div>
-                  <div className="user-details">
-                    <h2>{review.name}</h2>
-                    <div>{review.date}</div>
-                    <div>
+                  <div className="user-details pr-8">
+                    <h2 className="pb-3 m-0 username">{review.name}</h2>
+                    <div className="pb-2 lightBlue">{review.date}</div>
+                    <div className="verified-user pb-4 lightBlue">
                       <span className="pi pi-check-circle"></span> Verfied
-                      review
+                      Review
                     </div>
                   </div>
                 </div>
                 <div className="movie-review-container">
-                  <div className="rate-it">
+                  <div className="rated m-0">
                     <i className="pi pi-heart-fill"></i>
                     <i className="pi pi-heart-fill"></i>
                     <i className="pi pi-heart-fill"></i>
@@ -66,7 +68,7 @@ const UserReview = () => {
                     <i className="pi pi-heart-fill"></i>
                   </div>
                   <h4>Awesome Movie</h4>
-                  <div>{review.comment}</div>
+                  <div className="lightBlue">{review.comment}</div>
                 </div>
               </div>
             ))}

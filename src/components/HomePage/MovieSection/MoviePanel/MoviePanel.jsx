@@ -30,9 +30,7 @@ const MoviePanel = () => {
 
         <div className="flex flex-wrap justify-content-center gap-3">
           <button className="custom-btn">NOW SHOWING</button>
-
           <button className="custom-btn">COMING SOON</button>
-
           <button className="custom-btn">EXCLUSIVE</button>
         </div>
         <div className="row card-container">

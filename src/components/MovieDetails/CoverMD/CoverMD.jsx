@@ -51,7 +51,7 @@ const CoverMD = () => {
                 <span className="pi pi-calendar"></span> {movie.dateOfRelease}
               </span>
               <span className="duration">
-                <span className="pi pi-clock"></span>
+                <span className="pi pi-clock"></span>{" "}
                 {movie.duration} mins
               </span>
             </div>
