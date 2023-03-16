@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import MovieCard from "../MovieCard/MovieCard";
 
@@ -35,13 +35,15 @@ const MoviePanel = () => {
         </div>
         <div className="row card-container">
           {movies.map((movie) => (
-            <a
+            <div
               className="col-md-3 moviecard"
               key={movie._id}
-              onClick={() => navigate("/movie/" + movie._id)}
+              // onClick={() => navigate("/movie/" + movie._id)}
             >
-              <MovieCard movie={movie} />
-            </a>
+              <Link to={`/movie/${movie._id}`}>
+                <MovieCard movie={movie} />
+              </Link>
+            </div>
           ))}
         </div>
       </div>

@@ -1,25 +1,9 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
-
 import { TabView, TabPanel } from "primereact/tabview";
 import { Avatar } from "primereact/avatar";
 
 import "./UserReview.scss";
 
-const UserReview = () => {
-  const [movie, setMovie] = useState({});
-  const { id } = useParams();
-
-  useEffect(() => {
-    axios.get("http://localhost:4000/api/movie").then((response) => {
-      console.log(response.data);
-      const clickedMovie = response.data.find((m) => m._id === id);
-      console.log(clickedMovie);
-      setMovie({ ...clickedMovie });
-      console.log(movie);
-    });
-  }, []);
+const UserReview = ({ movie }) => {
 
   return (
     <div className="container">
@@ -29,9 +13,9 @@ const UserReview = () => {
           <p className="lightBlue">{movie.description}</p>
 
           <div className="flex uppercase">
-            <h3 className="m-0 mt-1">IMDB Rating</h3>
-            <h4 className="m-0 mt-1 ml-2 lightBlue teal-color">
-              - {movie.rating}/10
+            <h3>IMDB Rating -</h3>
+            <h4 className="m-0 pt-1 pb-1 ml-2 lightBlue teal-color">
+              {movie.rating}/10
             </h4>
           </div>
         </TabPanel>

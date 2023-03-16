@@ -1,3 +1,7 @@
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+
 import NavBar from "../../NavBar/NavBar";
 import CoverMD from "../CoverMD/CoverMD";
 import UserReview from "../UserReview/UserReview";
@@ -5,12 +9,22 @@ import UserReview from "../UserReview/UserReview";
 import "./HomeMD.scss";
 
 const HomeMd = () => {
+  const [movie, setMovie] = useState({});
+  const { id } = useParams();
+
+  useEffect(() => {
+    axios.get("http://localhost:4000/api/movie/" + id).then((response) => {
+      console.log(response.data);
+      setMovie(response.data);
+      console.log(movie);
+    });
+  }, []);
 
   return (
     <div>
       <NavBar />
-      <CoverMD />
-      <UserReview />
+      <CoverMD movie={movie} />
+      <UserReview movie={movie} />
     </div>
   );
 };

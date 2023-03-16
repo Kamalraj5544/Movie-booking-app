@@ -1,25 +1,9 @@
 import "./CoverMD.scss";
 
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
-
 import tomato from "../../../assets/Movies/tomato.png";
 import cake from "../../../assets/Movies/cake.png";
 
-const CoverMD = () => {
-  const [movie, setMovie] = useState({});
-  const { id } = useParams();
-
-  useEffect(() => {
-    axios.get("http://localhost:4000/api/movie").then((response) => {
-      console.log(response.data);
-      const clickedMovie = response.data.find((m) => m._id === id);
-      console.log(clickedMovie);
-      setMovie({ ...clickedMovie });
-      console.log(movie);
-    });
-  }, []);
+const CoverMD = ({ movie }) => {
   return (
     <section className="banner-section">
       <div className="container">
@@ -51,8 +35,7 @@ const CoverMD = () => {
                 <span className="pi pi-calendar"></span> {movie.dateOfRelease}
               </span>
               <span className="duration">
-                <span className="pi pi-clock"></span>{" "}
-                {movie.duration} mins
+                <span className="pi pi-clock"></span> {movie.duration} mins
               </span>
             </div>
           </div>
