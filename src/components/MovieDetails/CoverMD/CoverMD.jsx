@@ -2,8 +2,11 @@ import "./CoverMD.scss";
 
 import tomato from "../../../assets/Movies/tomato.png";
 import cake from "../../../assets/Movies/cake.png";
+import { Link, useNavigate } from "react-router-dom";
 
 const CoverMD = ({ movie }) => {
+  const navigate = useNavigate();
+
   return (
     <section className="banner-section">
       <div className="container">
@@ -85,7 +88,9 @@ const CoverMD = ({ movie }) => {
               <div className="flex justify-content-center">Rate It</div>
             </div>
           </div>
-          <button className="custom-btn book-btn">book tickets</button>
+          <Link to={`/movie/${movie._id}/ticketplan`}>
+            <button className="custom-btn book-btn">book tickets</button>
+          </Link>
         </div>
       </div>
     </section>
