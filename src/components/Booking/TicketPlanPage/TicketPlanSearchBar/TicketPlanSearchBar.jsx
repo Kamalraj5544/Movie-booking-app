@@ -2,7 +2,7 @@ import "./TicketPlanSearchBar"
 
 const TicketPlanSearchBar = () => {
   return (
-    <div>TicketPlanSearchBar</div>
+    <div></div>
   )
 }
 
