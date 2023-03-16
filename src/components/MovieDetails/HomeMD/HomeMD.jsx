@@ -9,6 +9,7 @@ import UserReview from "../UserReview/UserReview";
 import "./HomeMD.scss";
 
 const HomeMd = () => {
+  
   const [movie, setMovie] = useState({});
   const { id } = useParams();
 

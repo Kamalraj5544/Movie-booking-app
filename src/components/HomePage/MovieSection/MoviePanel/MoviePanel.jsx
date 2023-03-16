@@ -34,17 +34,18 @@ const MoviePanel = () => {
           <button className="custom-btn">EXCLUSIVE</button>
         </div>
         <div className="row card-container">
-          {movies.map((movie) => (
-            <div
-              className="col-md-3 moviecard"
-              key={movie._id}
-              // onClick={() => navigate("/movie/" + movie._id)}
-            >
-              <Link to={`/movie/${movie._id}`}>
-                <MovieCard movie={movie} />
-              </Link>
-            </div>
-          ))}
+          {movies &&
+            movies.map((movie) => (
+              <div
+                className="col-md-3 moviecard"
+                key={movie._id}
+                // onClick={() => navigate("/movie/" + movie._id)}
+              >
+                <Link to={`/movie/${movie._id}`}>
+                  <MovieCard movie={movie} />
+                </Link>
+              </div>
+            ))}
         </div>
       </div>
     </div>

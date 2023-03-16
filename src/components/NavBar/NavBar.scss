@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   z-index: 99;
-  opacity: 0.88;
+  opacity: 0.9;
   border-bottom: 1px solid rgba(255, 255, 255, 0.102);
 }
 
@@ -21,10 +21,11 @@
 .logo {
   width: 85%;
   max-width: 100%;
+  object-fit: contain;
 }
 
 .logo:hover {
-  transform: scale(1.14);
+  transform: scale(1.1);
   transition: ease-in-out;
 }
 
