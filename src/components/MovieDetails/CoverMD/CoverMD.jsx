@@ -88,9 +88,12 @@ const CoverMD = ({ movie }) => {
               <div className="flex justify-content-center">Rate It</div>
             </div>
           </div>
-          <Link to={`/movie/${movie._id}/ticketplan`}>
-            <button className="custom-btn book-btn">book tickets</button>
-          </Link>
+          <button
+            className="custom-btn book-btn"
+            onClick={() => navigate(`/movie/${movie._id}/ticketplan`)}
+          >
+            book tickets
+          </button>
         </div>
       </div>
     </section>

@@ -6,8 +6,6 @@ import { InputText } from "primereact/inputtext";
 
 import { useState } from "react";
 
-import { BsSearch } from "react-icons/bs";
-
 const SearchPanel = () => {
   const [selectedCity, setSelectedCity] = useState(null);
   const cities = [
@@ -26,33 +24,33 @@ const SearchPanel = () => {
         <div className="search-section-bgImg"></div>
         <div className="search-header text-center">
           <p className="welcome-section">
-            <span className="teal-color">WELCOME TO BOOK MY TICKET </span>
+            <span className="teal-color uppercase">
+              welcome to book my ticket
+            </span>
             {/* <span className="red-color">B</span>OOK{" "}
-            <span className="red-color">MY</span> TICKE
-            <span className="red-color">T</span> */}
+              <span className="red-color">MY</span> TICKE
+              <span className="red-color">T</span> */}
           </p>
-          <p className="desc">WHAT ARE YOU LOOKING FOR</p>
+          <p className="desc uppercase">what are you looking for</p>
         </div>
         <div className="search-box container">
           <form className="form-container">
             <div className="form-group">
               <div className="search-input">
-                {/* <input
-                  type="text"
-                  placeholder="Search for Movies"
-                  className="input-box"
-                />
-                <span className="search-icon">
-                  <BsSearch />
-                </span> */}
                 <span className="p-input-icon-left">
-                  <i className="pi pi-search" />
+                  <i className="pi pi-search" style={{ fontSize: "1.2rem" }} />
                   <InputText placeholder="Search for Movies" />
                 </span>
               </div>
             </div>
             <div className="form-group">
-              <span className="teal-color form-header">City:</span>
+              <span className="teal-color form-header">
+                <span
+                  className="pi pi-building"
+                  style={{ fontSize: "1.3rem" }}
+                />{" "}
+                City:
+              </span>
               <div className="city-dropDown">
                 <Dropdown
                   value={selectedCity}
@@ -65,7 +63,13 @@ const SearchPanel = () => {
               </div>
             </div>
             <div className="form-group ">
-              <span className="teal-color form-header">Date:</span>
+              <span className="teal-color form-header">
+                <span
+                  className="pi pi-calendar"
+                  style={{ fontSize: "1.3rem" }}
+                />{" "}
+                Date:
+              </span>
               <div className="date-dropDown">
                 <Calendar
                   value={date}

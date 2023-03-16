@@ -13,8 +13,12 @@ body {
   background: #001232;
 }
 
-a{
-  text-decoration:none;
+a {
+  text-decoration: none;
+}
+
+input::placeholder{
+  color: #ffffffe1 !important;
 }
 
 .p-dropdown {
@@ -22,12 +26,8 @@ a{
   background-color: transparent !important;
 }
 
-.p-placeholder {
-  color: rgba(39, 118, 208, 0.774) !important;
-}
-
 .p-inputtext {
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: transparent !important;
   border: none;
 }
@@ -91,10 +91,10 @@ a{
 }
 
 .pi {
-  color: #31d7a9;
+  color: #31d7a9 !important;
 }
 
-.p-avatar img{
+.p-avatar img {
   object-fit: cover;
   border: 3.5px solid #31d7a9;
 }
