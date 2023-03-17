@@ -15,10 +15,22 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+li{
+  list-style: none;
 }
 
 input::placeholder{
   color: #ffffffe1 !important;
+}
+
+.flex-center{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .p-dropdown {

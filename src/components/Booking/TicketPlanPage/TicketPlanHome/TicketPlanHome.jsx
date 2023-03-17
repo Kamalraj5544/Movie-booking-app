@@ -17,7 +17,6 @@ const TicketPlanHome = () => {
     axios.get("http://localhost:4000/api/movie/" + id).then((response) => {
       console.log(response.data);
       setMovie(response.data);
-      console.log(movie);
     });
   }, []);
   return (
@@ -25,9 +24,7 @@ const TicketPlanHome = () => {
       <NavBar />
       <TicketPlanHeader movie={movie} />
       <TicketPlanSearchBar />
-      <div className="container">
-        <TicketPlanSection />
-      </div>
+      <TicketPlanSection movieID={movie._id} />
     </div>
   );
 };

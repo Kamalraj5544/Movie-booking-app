@@ -1,3 +1,73 @@
-.box-none{
-    box-shadow: none !important;
+.ticket-plan-section {
+  padding: 5rem;
+}
+
+.ticket-plan-wrapper {
+  background-color: #01173f;
+  padding-inline-start: 0;
+}
+
+.ticket-plan-wrapper li {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0;
+  border-bottom: 1px solid #11326f;
+}
+
+.left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 1px solid #11326f;
+  border-bottom: 1px solid #11326f;
+  padding: 2rem;
+  width: 50%;
+}
+
+.cinema-name {
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.location-icon {
+  border-radius: 50%;
+  background-color: #17305f;
+  width: 35px;
+  height: 35px;
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //   border-left: 1px solid #11326f;
+  //   border-bottom: 1px solid #11326f;
+  padding: 2rem;
+  width: 50%;
+}
+
+.movie-timing {
+  position: relative;
+  width: 100%;
+  color: #ffffff;
+  padding: 0.3rem;
+  width: 5.8rem;
+  background: #162f5f;
+
+  -webkit-mask-image: url("../../../../assets/Movies/movie-seat.png");
+  mask-image: url("../../../../assets/Movies/movie-seat.png");
+
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: center center;
+  mask-position: center center;
+
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
 }
