@@ -159,7 +159,7 @@
 
   i{
     font-size: 12px;
-    color: #f1481f;
+    color: #f1481f !important;
     margin-left: .2rem;
     cursor: pointer;
   }
@@ -171,10 +171,11 @@
   i{
     font-size: 12px;
     margin-left: .2rem;
-    color: #223c6e;
+    color: #223c6e !important;
     cursor: pointer;
   }
 }
+
 
 .book-btn{
   margin:1rem 0;

@@ -8,7 +8,7 @@ const TicketPlanHeader = ({ movie }) => {
         <div className="movie-lang">
           {movie.languages &&
             movie.languages.map((language, index) => (
-              <span key={index + language} className="p-1 text-lg">
+              <span key={index + language} className="p-1 text-base">
                 {language} 
                 {/* {index !== movie.languages.length - 1 ? " , " : ""} */}
               </span>

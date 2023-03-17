@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
+import { RiEmotionSadLine } from "react-icons/ri";
+
 const TicketPlanSection = () => {
   const [ticketDetails, setTicketDetails] = useState();
   const { id } = useParams();
@@ -20,7 +22,7 @@ const TicketPlanSection = () => {
 
   return (
     <div className="ticket-plan-section">
-      <div className="container">
+      <div className="">
         <div className="row justify-content-center">
           <div className="col-lg-9 mb-lg-0">
             <ul className="ticket-plan-wrapper">
@@ -28,11 +30,11 @@ const TicketPlanSection = () => {
                 ticketDetails.map((details) => (
                   <li key={details._id}>
                     <div className="left flex flex-row">
-                      <div className="heart-icon  ml-4 mr-4 ">
-                        <span className="pi pi-heart"></span>
+                      <div className="heart-icon">
+                        <span className="pi pi-heart-fill"></span>
+                        <a className="cinema-name">{details.name}</a>
                       </div>
-                      <a className="ml-4 mr-4 cinema-name ">{details.name}</a>
-                      <div className="location-icon flex-center  ml-4 mr-4">
+                      <div className="location-icon flex-center">
                         <span className="pi pi-map-marker"></span>
                       </div>
                     </div>
@@ -49,6 +51,20 @@ const TicketPlanSection = () => {
                     </div>
                   </li>
                 ))}
+
+              {ticketDetails && ticketDetails.length === 0 && (
+                <div
+                  className="flex-center flex-row p-4 shake-effect"
+                  onLoad={() => scrollTo(0, 500)}
+                >
+                  <span className="pi bold">
+                    <RiEmotionSadLine />
+                  </span>
+                  <div className="ml-2 mt-2 text-lg flex-center">
+                    Sorry no shows found!..
+                  </div>
+                </div>
+              )}
             </ul>
           </div>
         </div>
