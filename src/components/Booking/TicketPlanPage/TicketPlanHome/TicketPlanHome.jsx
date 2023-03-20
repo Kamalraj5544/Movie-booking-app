@@ -19,6 +19,7 @@ const TicketPlanHome = () => {
       setMovie(response.data);
     });
   }, []);
+  
   return (
     <div>
       <NavBar />
