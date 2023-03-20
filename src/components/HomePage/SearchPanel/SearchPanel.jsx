@@ -1,13 +1,13 @@
 import "./SearchPanel.scss";
 
 import { Dropdown } from "primereact/dropdown";
-import { Calendar } from "primereact/calendar";
 import { InputText } from "primereact/inputtext";
 
 import { useState } from "react";
 
 const SearchPanel = () => {
   const [selectedCity, setSelectedCity] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
   const cities = [
     { name: "New York", code: "NY" },
     { name: "Rome", code: "RM" },
@@ -16,7 +16,14 @@ const SearchPanel = () => {
     { name: "Paris", code: "PRS" },
   ];
 
-  const [date, setDate] = useState(null);
+  const dates = [
+    { date: "24 / 03 / 2023" },
+    { date: "25 / 03 / 2023" },
+    { date: "26 / 03 / 2023" },
+    { date: "27 / 03 / 2023" },
+    { date: "28/ 03 / 2023" },
+    { date: "29 / 03 / 2023" },
+  ];
 
   return (
     <div className="search-ticket-section" id="search-section">
@@ -71,12 +78,12 @@ const SearchPanel = () => {
                 Date:
               </span>
               <div className="date-dropDown">
-                <Calendar
-                  value={date}
+                <Dropdown
+                  value={selectedDate}
+                  onChange={(e) => setSelectedDate(e.value)}
+                  options={dates}
+                  optionLabel="date"
                   placeholder="Select a Date"
-                  onChange={(e) => setDate(e.value)}
-                  // showIcon
-                  touchUI
                   className="md:w-11rem"
                 />
               </div>

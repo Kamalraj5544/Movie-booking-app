@@ -44,6 +44,7 @@ const TicketPlanSection = () => {
                           <a
                             className="movie-timing flex-center"
                             key={timing._id}
+                            
                           >
                             {timing.time}
                           </a>
@@ -55,7 +56,6 @@ const TicketPlanSection = () => {
               {ticketDetails && ticketDetails.length === 0 && (
                 <div
                   className="flex-center flex-row p-4 shake-effect"
-                  onLoad={() => scrollTo(0, 500)}
                 >
                   <span className="pi bold">
                     <RiEmotionSadLine />

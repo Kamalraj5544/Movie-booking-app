@@ -8,6 +8,8 @@ import { useState } from "react";
 
 const TicketPlanSearchBar = () => {
   const [selectedCity, setSelectedCity] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
+
   const cities = [
     { name: "New York", code: "NY" },
     { name: "Rome", code: "RM" },
@@ -16,7 +18,15 @@ const TicketPlanSearchBar = () => {
     { name: "Paris", code: "PRS" },
   ];
 
-  const [date, setDate] = useState(null);
+  const dates = [
+    { date: "24 / 03 / 2023" },
+    { date: "25 / 03 / 2023" },
+    { date: "26 / 03 / 2023" },
+    { date: "27 / 03 / 2023" },
+    { date: "28/ 03 / 2023" },
+    { date: "29 / 03 / 2023" },
+  ];
+
 
   return (
     <div>
@@ -52,14 +62,14 @@ const TicketPlanSearchBar = () => {
               Date:
             </span>
             <div className="date-dropDown">
-              <Calendar
-                value={date}
-                placeholder="Select a Date"
-                onChange={(e) => setDate(e.value)}
-                // showIcon
-                touchUI
-                className="md:w-11rem"
-              />
+              <Dropdown
+                  value={selectedDate}
+                  onChange={(e) => setSelectedDate(e.value)}
+                  options={dates}
+                  optionLabel="date"
+                  placeholder="Select a Date"
+                  className="md:w-11rem"
+                />
             </div>
           </div>
         </form>
