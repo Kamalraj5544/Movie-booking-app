@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import TicketPlanHome from "../Booking/TicketPlanPage/TicketPlanHome/TicketPlanHome";
 import Home from "../HomePage/Home/Home";
 import HomeMd from "../MovieDetails/HomeMD/HomeMd";
 import SignIn from "../Users/Sign-in/SignIn";
 import SignUp from "../Users/Sign-up/SignUp";
+import SeatPlanHome from "../Booking/SeatPlanPage/SeatPlanHome/SeatPlanHome";
+import TicketPlanHome from "../Booking/TicketPlanPage/TicketPlanHome/TicketPlanHome";
 
 const RouteingPages = () => {
   return (
@@ -15,6 +16,7 @@ const RouteingPages = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/movie/:id" element={<HomeMd />} />
         <Route path="/movie/:id/ticketplan" element={<TicketPlanHome />} />
+        <Route path="/movie/:timingId/seatplan" element={<SeatPlanHome />} />
       </Routes>
     </Router>
   );

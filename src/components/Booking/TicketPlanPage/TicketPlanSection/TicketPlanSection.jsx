@@ -43,8 +43,8 @@ const TicketPlanSection = () => {
                         details.timings.map((timing) => (
                           <a
                             className="movie-timing flex-center"
-                            key={timing._id}
-                            
+                            key={timing.movie_id}
+                            href={"/movie/"+timing.movie_id+"/seatplan"}
                           >
                             {timing.time}
                           </a>
@@ -52,6 +52,7 @@ const TicketPlanSection = () => {
                     </div>
                   </li>
                 ))}
+
 
               {ticketDetails && ticketDetails.length === 0 && (
                 <div

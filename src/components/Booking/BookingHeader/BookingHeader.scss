@@ -1,4 +1,20 @@
 .booking-header {
   padding-top: 16rem;
   padding-bottom: 6rem;
+  position: relative;
+}
+
+.bg-booking-header{
+  background-image: url("../../../assets/booking-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: 0;
+  right: 0;
+  height:100%;
+  width: 100%;
+  opacity: .4;
+  z-index: -1;
 }

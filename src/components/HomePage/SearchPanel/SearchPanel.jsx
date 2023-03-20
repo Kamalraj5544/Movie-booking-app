@@ -56,7 +56,7 @@ const SearchPanel = () => {
                   className="pi pi-building"
                   style={{ fontSize: "1.3rem" }}
                 />{" "}
-                City:
+                City
               </span>
               <div className="city-dropDown">
                 <Dropdown
@@ -75,7 +75,7 @@ const SearchPanel = () => {
                   className="pi pi-calendar"
                   style={{ fontSize: "1.3rem" }}
                 />{" "}
-                Date:
+                Date 
               </span>
               <div className="date-dropDown">
                 <Dropdown

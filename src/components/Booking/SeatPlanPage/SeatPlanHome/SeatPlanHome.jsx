@@ -1,13 +1,13 @@
 import "./SeatPlanHome.scss";
 
 import NavBar from "../../../NavBar/NavBar";
-import SeatPlanHeader from "../SeatPlanHeader/SeatPlanHeader";
+import BookingHeader from "../../BookingHeader/BookingHeader";
 
 const SeatPlanHome = () => {
   return (
     <div>
       <NavBar />
-      <SeatPlanHeader />
+      <BookingHeader />
     </div>
   );
 };
