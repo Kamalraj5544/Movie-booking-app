@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 import NavBar from "../../../NavBar/NavBar";
-import TicketPlanHeader from "../TicketPlanHeader/TicketPlanHeader";
+import BookingHeader from "../../BookingHeader/BookingHeader";
 import TicketPlanSearchBar from "../TicketPlanSearchBar/TicketPlanSearchBar";
 import TicketPlanSection from "../TicketPlanSection/TicketPlanSection";
 
@@ -22,7 +22,7 @@ const TicketPlanHome = () => {
   return (
     <div>
       <NavBar />
-      <TicketPlanHeader movie={movie} />
+      <BookingHeader movie={movie} />
       <TicketPlanSearchBar />
       <TicketPlanSection movieID={movie._id} />
     </div>
