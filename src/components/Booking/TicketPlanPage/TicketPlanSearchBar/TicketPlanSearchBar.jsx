@@ -1,8 +1,6 @@
 import "./TicketPlanSearchBar";
 
 import { Dropdown } from "primereact/dropdown";
-import { Calendar } from "primereact/calendar";
-import { InputText } from "primereact/inputtext";
 
 import { useState } from "react";
 

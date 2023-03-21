@@ -4,13 +4,16 @@
   top: 0;
   left: 0;
   z-index: 99;
-  opacity: 0.9;
+  // opacity: 0.9;
   border-bottom: 1px solid rgba(255, 255, 255, 0.102);
+  background: transparent !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
-.header-section:hover {
-  opacity: 1;
-}
+// .header-section:hover {
+//   opacity: 1;
+// }
 
 .navbar-bg {
   background-color: #0a1e5e !important;
@@ -73,10 +76,12 @@
   );
   border-radius: 25px;
   border: 0;
-  color: aliceblue !important;
+  color: white !important;
   padding: 0.6rem;
+  line-height: 1.2rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 10rem;
   text-transform: uppercase;
 

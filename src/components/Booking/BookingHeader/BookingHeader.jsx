@@ -9,7 +9,7 @@ const BookingHeader = ({ movie,cinema }) => {
           {movie.name}
         </h3>
         <div className="movie-lang">
-        <span className="p-1 text-base">{(cinema && cinema.name !== undefined && cinema.name)}</span> 
+        <span className="p-1 text-base">{cinema && cinema.name !== undefined && cinema.name }</span> 
         <span className="teal-color p-1 text-2xl"> | {" "}</span> 
           {movie.languages &&
             movie.languages.map((language, index) => (
@@ -17,6 +17,7 @@ const BookingHeader = ({ movie,cinema }) => {
                 {language}
               </span>
             ))}
+            <span className="teal-color p-1 text-2xl"> | {" "}</span> 
         </div>
       </div>
     </div>

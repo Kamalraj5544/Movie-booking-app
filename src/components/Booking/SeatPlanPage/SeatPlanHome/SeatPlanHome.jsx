@@ -6,6 +6,7 @@ import axios from "axios";
 
 import NavBar from "../../../NavBar/NavBar";
 import BookingHeader from "../../BookingHeader/BookingHeader";
+import SeatPlanBar from "../SeatPlanBar/SeatPlanBar";
 
 const SeatPlanHome = () => {
   const [movie, setMovie] = useState({});
@@ -31,6 +32,7 @@ const SeatPlanHome = () => {
     <div>
       <NavBar />
       <BookingHeader movie={movie} cinema={cinema}/>
+      <SeatPlanBar />
     </div>
   );
 };
