@@ -44,7 +44,7 @@ const TicketPlanSection = () => {
                           <a
                             className="movie-timing flex-center"
                             key={timing.movie_id}
-                            href={"/movie/"+timing.movie_id+"/seatplan"}
+                            href={"/movie/"+timing.movie_id+"/seatplan/"+details._id}
                           >
                             {timing.time}
                           </a>

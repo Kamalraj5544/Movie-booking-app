@@ -9,19 +9,28 @@ import BookingHeader from "../../BookingHeader/BookingHeader";
 
 const SeatPlanHome = () => {
   const [movie, setMovie] = useState({});
-  const { id } = useParams();
+  const [cinema, setCinema] = useState({})
+  const { id, detailsId } = useParams();
 
   useEffect(() => {
     axios.get("http://localhost:4000/api/movie/" + id).then((response) => {
       console.log(response.data);
       setMovie(response.data);
     });
+
+    axios
+      .get("http://localhost:4000/api/movie/cinema/" + id)
+      .then((response) => {
+        const currentCinema = response.data.find(cinema => cinema._id === detailsId)
+        setCinema({...currentCinema})
+        console.log(cinema);
+      });
   }, []);
 
   return (
     <div>
       <NavBar />
-      <BookingHeader movie={movie} />
+      <BookingHeader movie={movie} cinema={cinema}/>
     </div>
   );
 };
