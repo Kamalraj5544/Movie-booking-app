@@ -44,11 +44,66 @@
 .screen-img{
     margin-bottom: 4rem;
     width: 100%;
-    vertical-align: middle;
 }
 
 
 .screen-img img {
-    object-fit: cover;
-    width: 100%;
+    width: 75%;
+}
+
+.screen-wrapper{
+  margin-bottom: 4rem;
+}
+
+.screen-area{
+  width: 100%;
+}
+
+
+.seat-line{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span{
+    font-size: 1.2rem;
+  }
+}
+
+.seat--area{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 6rem;
+
+  @media screen and (max-width: 992px) {
+    gap: 3rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 2.3rem;
+  }
+}
+
+.front-line ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  flex-direction: row; 
+}
+
+.single-seat img{
+  padding: .3rem;
+  cursor: pointer;
+
+
+  @media screen and (max-width: 992px) {
+    width: 38px;
+    padding: .15rem;
+  }
+  @media screen and (max-width: 768px) {
+    width: 28px;
+    padding: 0.08rem;
+  }
 }
