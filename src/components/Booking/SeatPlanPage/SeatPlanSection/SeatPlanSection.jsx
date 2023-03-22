@@ -102,7 +102,7 @@ const SeatPlanSection = () => {
                       <ul>
                         {seatsFour1.map((seatNo) => (
                           <li
-                            className="single-seat bg-teal"
+                            className="single-seat"
                             onClick={() => handleSelectedSeats(seatNo, rowName)}
                           >
                             <img src={seatImg} alt="seat-img" />
