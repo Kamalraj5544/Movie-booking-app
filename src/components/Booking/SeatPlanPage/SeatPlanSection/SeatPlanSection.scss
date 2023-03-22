@@ -13,8 +13,8 @@
   text-transform: uppercase;
   line-height: 1.3;
   width: 25rem;
-  padding: .8rem;
-  margin:  4rem auto;
+  padding: 0.8rem;
+  margin: 4rem auto;
   margin-top: 0;
 }
 
@@ -27,50 +27,48 @@
   transform: translateX(-50%);
 }
 
-.screen::before{
-    position: absolute;
-    content: "";
-    width: 80%;
-    top: 0;
+.screen::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  top: 0;
 }
 
-.screen::after{
-    position: absolute;
-    content: "";
-    width: 100%;
-    bottom: 0;
+.screen::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: 0;
 }
 
-.screen-img{
-    margin-bottom: 4rem;
-    width: 100%;
-}
-
-
-.screen-img img {
-    width: 75%;
-}
-
-.screen-wrapper{
+.screen-img {
   margin-bottom: 4rem;
-}
-
-.screen-area{
   width: 100%;
 }
 
+.screen-img img {
+  width: 75%;
+}
 
-.seat-line{
+.screen-wrapper {
+  margin-bottom: 4rem;
+}
+
+.screen-area {
+  width: 100%;
+}
+
+.seat-line {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  span{
+  span {
     font-size: 1.2rem;
   }
 }
 
-.seat--area{
+.seat--area {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -86,21 +84,45 @@
   }
 }
 
-.front-line ul{
+.front-line ul {
   display: flex;
   justify-content: space-between;
-  align-items: center;  
-  flex-direction: row; 
+  align-items: center;
+  flex-direction: row;
 }
 
-.single-seat img{
-  padding: .3rem;
-  cursor: pointer;
+.single-seat {
+  position: relative;
+  padding: 0.3rem;
+  background: transparent !important;
 
+  -webkit-mask-image: url("../../../../assets/Movies/seatImg.png");
+  mask-image: url("../../../../assets/Movies/seatImg.png");
+
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: center center;
+  mask-position: center center;
+
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.single-seat:hover {
+  background-color: #31d7a9 !important;
+}
+
+.single-seat img {
+  cursor: pointer;
+  position: relative;
 
   @media screen and (max-width: 992px) {
     width: 38px;
-    padding: .15rem;
+    padding: 0.15rem;
   }
   @media screen and (max-width: 768px) {
     width: 28px;
@@ -108,13 +130,24 @@
   }
 }
 
-.proceed-book{
+.seatNo{
+  font-size: .2rem !important;
+  color: #31d7a9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.proceed-book {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.proceed-book-bg{
+.proceed-book-bg {
   background: url("../../../../assets/proceed-book-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,27 +158,28 @@
   z-index: -1;
   border-radius: 15px;
   filter: blur(1px);
-  opacity: .85;
+  opacity: 0.85;
 }
 
-.proceed-to-book{
+.proceed-to-book {
   padding: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.book-item-header{
-  padding-bottom: .5rem;
+.book-item-header {
+  padding-bottom: 0.5rem;
   font-size: 1.1rem;
 }
 
-.all-seats,.total-price{
+.all-seats,
+.total-price {
   color: #31d7a9;
   font-weight: 600;
   font-size: 1.8rem;
 }
 
-.bg-teal{
+.bg-teal {
   background-color: #31d7a9 !important;
 }

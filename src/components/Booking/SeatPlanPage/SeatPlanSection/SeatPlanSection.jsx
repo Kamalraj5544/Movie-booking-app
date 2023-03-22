@@ -2,8 +2,8 @@ import "./SeatPlanSection.scss";
 
 import { useState } from "react";
 
-import screenImg from "../../../../assets/screen-img.png";
-import seatImg from "../../../../assets/seatImg.png";
+import screenImg from "../../../../assets/Movies/screen-img.png";
+import seatImg from "../../../../assets/Movies/seatImg.png";
 
 const SeatPlanSection = () => {
   const [selectedSeats, setSelectedSeats] = useState([]);
@@ -22,13 +22,13 @@ const SeatPlanSection = () => {
 
     if (isPresent === -1) {
       setSelectedSeats([...selectedSeats, currentSeat]);
-      setTotalPrice(selectedSeats.length*120);
+      setTotalPrice(selectedSeats.length * 120);
       return;
     }
 
     const updatedSeats = selectedSeats.filter((seat) => seat !== currentSeat);
     setSelectedSeats(updatedSeats);
-    setTotalPrice(selectedSeats.length*120);
+    setTotalPrice(selectedSeats.length * 120);
     return;
   };
 
@@ -55,6 +55,7 @@ const SeatPlanSection = () => {
                             onClick={() => handleSelectedSeats(seatNo, rowName)}
                           >
                             <img src={seatImg} alt="seat-img" />
+                            <span className="seatNo">{rowName + seatNo}</span>
                           </li>
                         ))}
                       </ul>
@@ -67,6 +68,7 @@ const SeatPlanSection = () => {
                             onClick={() => handleSelectedSeats(seatNo, rowName)}
                           >
                             <img src={seatImg} alt="seat-img" />
+                            <span className="seatNo">{rowName + seatNo}</span>
                           </li>
                         ))}
                       </ul>
@@ -79,6 +81,7 @@ const SeatPlanSection = () => {
                             onClick={() => handleSelectedSeats(seatNo, rowName)}
                           >
                             <img src={seatImg} alt="seat-img" />
+                            <span className="seatNo">{rowName + seatNo}</span>
                           </li>
                         ))}
                       </ul>
@@ -106,6 +109,7 @@ const SeatPlanSection = () => {
                             onClick={() => handleSelectedSeats(seatNo, rowName)}
                           >
                             <img src={seatImg} alt="seat-img" />
+                            <span className="seatNo">{rowName + seatNo}</span>
                           </li>
                         ))}
                       </ul>
@@ -118,6 +122,7 @@ const SeatPlanSection = () => {
                             onClick={() => handleSelectedSeats(seatNo, rowName)}
                           >
                             <img src={seatImg} alt="seat-img" />
+                            <span className="seatNo">{rowName + seatNo}</span>
                           </li>
                         ))}
                       </ul>
@@ -130,6 +135,7 @@ const SeatPlanSection = () => {
                             onClick={() => handleSelectedSeats(seatNo, rowName)}
                           >
                             <img src={seatImg} alt="seat-img" />
+                            <span className="seatNo">{rowName + seatNo}</span>
                           </li>
                         ))}
                       </ul>
@@ -153,9 +159,9 @@ const SeatPlanSection = () => {
                 </span>
               ))}
 
-              {
-                selectedSeats.length === 0 && <span className="all-seats">-</span>
-              }
+              {selectedSeats.length === 0 && (
+                <span className="all-seats">-</span>
+              )}
             </div>
             <div>
               <div className="book-item-header">Total Price</div>
