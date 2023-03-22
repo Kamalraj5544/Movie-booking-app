@@ -23,6 +23,7 @@ const SeatPlanHome = () => {
     axios
       .get("http://localhost:4000/api/movie/cinema/" + id)
       .then((response) => {
+        console.log(response.data);
         const currentCinema = response.data.find(cinema => cinema._id === detailsId)
         setCinema({...currentCinema})
         console.log(cinema);

@@ -504,7 +504,22 @@ const SeatPlanSection = () => {
             </ul>
           </div>
         </div>
-        <div className="proceed-book"></div>
+        <div className="proceed-book">
+          <div className="proceed-book-bg"></div>
+          <div className="proceed-to-book">
+            <div>
+              <div className="pb-2 text-xl">Selected Seats</div>
+              <div className="teal-color text-4xl font-semibold">D9, D10</div>
+            </div>
+            <div>
+              <div className="pb-2 text-xl">Total Price</div>
+              <div className="teal-color text-4xl font-semibold">Rs.220</div>
+            </div>
+            <div>
+              <button className="custom-btn">proceed</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
