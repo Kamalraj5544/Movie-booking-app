@@ -60,17 +60,18 @@
 
 .seat-line {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   span {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    // color: #31d7a9;
   }
 }
 
 .seat--area {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   gap: 6rem;
@@ -80,7 +81,10 @@
   }
 
   @media screen and (max-width: 768px) {
-    gap: 2.3rem;
+    gap: 2rem;
+  }
+  @media screen and (max-width: 500px) {
+    gap: 1rem;
   }
 }
 
@@ -93,7 +97,6 @@
 
 .single-seat {
   position: relative;
-  padding: 0.3rem;
   background: transparent !important;
 
   -webkit-mask-image: url("../../../../assets/Movies/seatImg.png");
@@ -118,6 +121,7 @@
 
 .single-seat img {
   cursor: pointer;
+  padding: 0.3rem;
   position: relative;
 
   @media screen and (max-width: 992px) {
@@ -128,9 +132,14 @@
     width: 28px;
     padding: 0.08rem;
   }
+  @media screen and (max-width: 500px) {
+    width: 20px;
+    padding: 0.04rem;
+  }
 }
 
 .seatNo{
+  cursor: pointer;
   font-size: .2rem !important;
   color: #31d7a9;
   position: absolute;
@@ -142,7 +151,7 @@
 }
 
 .proceed-book {
-  width: 100%;
+  width: 95%;
   height: 100%;
   position: relative;
 }
@@ -170,7 +179,7 @@
 
 .book-item-header {
   padding-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .all-seats,
@@ -180,6 +189,3 @@
   font-size: 1.8rem;
 }
 
-.bg-teal {
-  background-color: #31d7a9 !important;
-}
