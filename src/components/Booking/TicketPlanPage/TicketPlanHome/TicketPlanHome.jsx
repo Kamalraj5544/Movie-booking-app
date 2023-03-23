@@ -11,21 +11,57 @@ import TicketPlanSection from "../TicketPlanSection/TicketPlanSection";
 
 const TicketPlanHome = () => {
   const [movie, setMovie] = useState({});
-  const { id } = useParams();
+  const [ticketDetails, setTicketDetails] = useState([]);
+  const [filteredDetails, setFilteredDetails] = useState([]);
+  const [availableCities, setAvailableCities] = useState([]);
+  const [availableDates, setAvailableDates] = useState([]);
+  const { movieId } = useParams();
+
+  const handleFilterDetails = (city) => {
+    console.log(city);
+    if (city != null && city != "All") {
+      const toFilterDetails = [...ticketDetails].filter(
+        (details) => details.city === city
+      );
+      setFilteredDetails(toFilterDetails);
+    } else {
+      setFilteredDetails([...ticketDetails]);
+    }
+  };
 
   useEffect(() => {
-    axios.get("http://localhost:4000/api/movie/" + id).then((response) => {
+    axios.get("http://localhost:4000/api/movie/" + movieId).then((response) => {
       console.log(response.data);
       setMovie(response.data);
     });
+
+    axios
+      .get("http://localhost:4000/api/movie/cinema/" + movieId)
+      .then((response) => {
+        console.log(response.data);
+        const theatreDetails = [...response.data];
+        const allCities = theatreDetails.map((deatils) => deatils.city);
+        const filteredCities = allCities.filter(
+          (city, i) => allCities.indexOf(city) === i
+        );
+        const cities = filteredCities.map((c) => ({ city: c }));
+        cities.push({ city: "All" });
+        console.log(cities);
+        setAvailableCities([...cities]);
+        setTicketDetails(response.data);
+        setFilteredDetails(response.data);
+      });
   }, []);
-  
+
   return (
     <div>
       <NavBar />
       <BookingHeader movie={movie} />
-      <TicketPlanSearchBar />
-      <TicketPlanSection movieID={movie._id} />
+      <TicketPlanSearchBar
+        cities={availableCities}
+        handleFilterDetails={handleFilterDetails}
+      />
+      <TicketPlanSection ticketDetails={filteredDetails} />
     </div>
   );
 };

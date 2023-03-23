@@ -6,19 +6,7 @@ import { useParams } from "react-router-dom";
 
 import { RiEmotionSadLine } from "react-icons/ri";
 
-const TicketPlanSection = () => {
-  const [ticketDetails, setTicketDetails] = useState();
-  const { id } = useParams();
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:4000/api/movie/cinema/" + id)
-      .then((response) => {
-        console.log(response.data);
-        setTicketDetails(response.data);
-        console.log(ticketDetails);
-      });
-  }, []);
+const TicketPlanSection = ({ticketDetails}) => {
 
   return (
     <div className="ticket-plan-section">
@@ -28,7 +16,7 @@ const TicketPlanSection = () => {
             <ul className="ticket-plan-wrapper">
               {ticketDetails &&
                 ticketDetails.map((details) => (
-                  <li key={details._id}>
+                  <li key={details._movieId}>
                     <div className="left flex flex-row">
                       <div className="heart-icon">
                         <span className="pi pi-heart-fill"></span>
@@ -44,7 +32,12 @@ const TicketPlanSection = () => {
                           <a
                             className="movie-timing flex-center"
                             key={timing.movie_id}
-                            href={"/movie/"+timing.movie_id+"/seatplan/"+details._id}
+                            href={
+                              "/movie/" +
+                              timing.movie_id +
+                              "/seatplan/" +
+                              details._id
+                            }
                           >
                             {timing.time}
                           </a>
@@ -53,11 +46,8 @@ const TicketPlanSection = () => {
                   </li>
                 ))}
 
-
               {ticketDetails && ticketDetails.length === 0 && (
-                <div
-                  className="flex-center flex-row p-4 shake-effect"
-                >
+                <div className="flex-center flex-row p-4 shake-effect">
                   <span className="pi bold">
                     <RiEmotionSadLine />
                   </span>

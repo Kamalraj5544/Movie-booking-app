@@ -4,17 +4,9 @@ import { Dropdown } from "primereact/dropdown";
 
 import { useState } from "react";
 
-const TicketPlanSearchBar = () => {
+const TicketPlanSearchBar = ({ cities, handleFilterDetails }) => {
   const [selectedCity, setSelectedCity] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
-
-  const cities = [
-    { name: "New York", code: "NY" },
-    { name: "Rome", code: "RM" },
-    { name: "London", code: "LDN" },
-    { name: "Istanbul", code: "IST" },
-    { name: "Paris", code: "PRS" },
-  ];
 
   const dates = [
     { date: "24 / 03 / 2023" },
@@ -36,9 +28,12 @@ const TicketPlanSearchBar = () => {
           <div className="city-dropDown">
             <Dropdown
               value={selectedCity}
-              onChange={(e) => setSelectedCity(e.value)}
+              onChange={(e) => {
+                setSelectedCity(e.value);
+                handleFilterDetails(e.value.city)
+              }}
               options={cities}
-              optionLabel="name"
+              optionLabel="city"
               placeholder="Select a City"
               className="md:w-11rem"
             />

@@ -9,12 +9,11 @@ import UserReview from "../UserReview/UserReview";
 import "./HomeMD.scss";
 
 const HomeMd = () => {
-  
   const [movie, setMovie] = useState({});
-  const { id } = useParams();
+  const { movieId } = useParams();
 
   useEffect(() => {
-    axios.get("http://localhost:4000/api/movie/" + id).then((response) => {
+    axios.get("http://localhost:4000/api/movie/" + movieId).then((response) => {
       console.log(response.data);
       setMovie(response.data);
       console.log(movie);

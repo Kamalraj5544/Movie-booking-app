@@ -12,20 +12,24 @@ import SeatPlanSection from "../SeatPlanSection/SeatPlanSection";
 const SeatPlanHome = () => {
   const [movie, setMovie] = useState({});
   const [cinema, setCinema] = useState({})
-  const { id, detailsId } = useParams();
+  const [availableTimings, setAvailableTimings] = useState([])
+  const { movieId, movieDetailsId } = useParams();
 
   useEffect(() => {
-    axios.get("http://localhost:4000/api/movie/" + id).then((response) => {
+    axios.get("http://localhost:4000/api/movie/" + movieId).then((response) => {
       console.log(response.data);
       setMovie(response.data);
     });
 
     axios
-      .get("http://localhost:4000/api/movie/cinema/" + id)
+      .get("http://localhost:4000/api/movie/cinema/" + movieId)
       .then((response) => {
         console.log(response.data);
-        const currentCinema = response.data.find(cinema => cinema._id === detailsId)
+        const currentCinema = response.data.find(cinema => cinema._id === movieDetailsId)
+        console.log(currentCinema);
+        const cinemaTimings = currentCinema.timings.map((details) => ({time : details.time}));
         setCinema({...currentCinema})
+        setAvailableTimings([...cinemaTimings])
         console.log(cinema);
       });
   }, []);
@@ -34,7 +38,7 @@ const SeatPlanHome = () => {
     <div>
       <NavBar />
       <BookingHeader movie={movie} cinema={cinema}/>
-      <SeatPlanBar />
+      <SeatPlanBar availableTimings={availableTimings} moviemovieId={movieId}/>
       <SeatPlanSection />
     </div>
   );
