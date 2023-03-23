@@ -2,20 +2,15 @@ import "./SeatPlanBar.scss";
 
 import { Dropdown } from "primereact/dropdown";
 
-import { useState,useEffect } from "react";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 
-const SeatPlanBar = ({availableTimings,movieId}) => {
+const SeatPlanBar = ({availableTimings}) => {
 
   const [selectedTime, setSelectedTime] = useState(null);
-  console.log(availableTimings)
   
-  useEffect(() => {
-    // const cinemaTimings = timings && timings.map((details) => ({time : details.time}));
-    // console.log(cinemaTimings)
-    // console.log(timings)
-  }, [])
+  const { movieId } = useParams();
   
-
   return (
     <div className="search-box p-0 text-white">
       <form className="form-container bg-blue border-noround">

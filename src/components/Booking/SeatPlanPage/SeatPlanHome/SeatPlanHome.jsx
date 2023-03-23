@@ -38,7 +38,7 @@ const SeatPlanHome = () => {
     <div>
       <NavBar />
       <BookingHeader movie={movie} cinema={cinema}/>
-      <SeatPlanBar availableTimings={availableTimings} moviemovieId={movieId}/>
+      <SeatPlanBar availableTimings={availableTimings} />
       <SeatPlanSection />
     </div>
   );
