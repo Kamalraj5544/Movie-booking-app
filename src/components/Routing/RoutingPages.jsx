@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Providers } from "react-redux";
 
 import Home from "../HomePage/Home/Home";
 import HomeMd from "../MovieDetails/HomeMD/HomeMd";
@@ -9,16 +10,24 @@ import TicketPlanHome from "../Booking/TicketPlanPage/TicketPlanHome/TicketPlanH
 
 const RouteingPages = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/movie/:movieId" element={<HomeMd />} />
-        <Route path="/movie/:movieId/ticketplan" element={<TicketPlanHome />} />
-        <Route path="/movie/:movieId/seatplan/:movieDetailsId" element={<SeatPlanHome />} />
-      </Routes>
-    </Router>
+    <Providers>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/movie/:movieId" element={<HomeMd />} />
+          <Route
+            path="/movie/:movieId/ticketplan"
+            element={<TicketPlanHome />}
+          />
+          <Route
+            path="/movie/:movieId/seatplan/:movieDetailsId"
+            element={<SeatPlanHome />}
+          />
+        </Routes>
+      </Router>
+    </Providers>
   );
 };
 
