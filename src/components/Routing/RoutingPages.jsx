@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Providers } from "react-redux";
 
+import { store } from "../../store/store";
+
 import Home from "../HomePage/Home/Home";
 import HomeMd from "../MovieDetails/HomeMD/HomeMd";
 import SignIn from "../Users/Sign-in/SignIn";
@@ -10,7 +12,7 @@ import TicketPlanHome from "../Booking/TicketPlanPage/TicketPlanHome/TicketPlanH
 
 const RouteingPages = () => {
   return (
-    <Providers>
+    <Providers store={store} >
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />

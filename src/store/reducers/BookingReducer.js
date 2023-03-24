@@ -19,3 +19,5 @@ const bookingSlice = createSlice({
 })
 
 export const bookingReducer = bookingSlice.reducer;
+
+export const bookingActions = bookingSlice.actions;

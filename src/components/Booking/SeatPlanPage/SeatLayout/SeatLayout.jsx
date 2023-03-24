@@ -6,17 +6,13 @@ import screenImg from "../../../../assets/Movies/screen-img.png";
 import seatImg from "../../../../assets/Movies/seatImg.png";
 import blockedSeatImg from "../../../../assets/Movies/seatImg-blocked.png";
 
-const SeatLayout = ({selectedSeats,handleSelectedSeats}) => {
-
-
+const SeatLayout = ({ selectedSeats, handleSelectedSeats }) => {
   const [seatsFour1, setSeatsFour1] = useState([1, 2, 3, 4]);
   const [seatsSix, setSeatsSix] = useState([5, 6, 7, 8, 9, 10]);
   const [seatsFour2, setSeatsFour2] = useState([11, 12, 13, 14]);
 
   const [silverRow, setSilverRow] = useState(["H", "G"]);
   const [goldRow, setGoldRow] = useState(["F", "E", "D", "C", "B", "A"]);
-
-
 
   return (
     <div className="screen-area">
@@ -36,7 +32,7 @@ const SeatLayout = ({selectedSeats,handleSelectedSeats}) => {
                     {seatsFour1.map((seatNo) => (
                       <li
                         className="single-seat"
-                        onClick={() => handleSelectedSeats(seatNo, rowName)}
+                        onClick={() => handleSelectedSeats(rowName + seatNo)}
                       >
                         <img
                           src={
@@ -58,7 +54,7 @@ const SeatLayout = ({selectedSeats,handleSelectedSeats}) => {
                     {seatsSix.map((seatNo) => (
                       <li
                         className="single-seat"
-                        onClick={() => handleSelectedSeats(seatNo, rowName)}
+                        onClick={() => handleSelectedSeats(rowName + seatNo)}
                       >
                         <img
                           src={
@@ -80,7 +76,7 @@ const SeatLayout = ({selectedSeats,handleSelectedSeats}) => {
                     {seatsFour2.map((seatNo) => (
                       <li
                         className="single-seat"
-                        onClick={() => handleSelectedSeats(seatNo, rowName)}
+                        onClick={() => handleSelectedSeats(rowName + seatNo)}
                       >
                         <img
                           src={
@@ -117,7 +113,7 @@ const SeatLayout = ({selectedSeats,handleSelectedSeats}) => {
                     {seatsFour1.map((seatNo) => (
                       <li
                         className="single-seat"
-                        onClick={() => handleSelectedSeats(seatNo, rowName)}
+                        onClick={() => handleSelectedSeats(rowName + seatNo)}
                       >
                         <img
                           src={
@@ -139,7 +135,7 @@ const SeatLayout = ({selectedSeats,handleSelectedSeats}) => {
                     {seatsSix.map((seatNo) => (
                       <li
                         className="single-seat"
-                        onClick={() => handleSelectedSeats(seatNo, rowName)}
+                        onClick={() => handleSelectedSeats(rowName + seatNo)}
                       >
                         <img
                           src={
@@ -161,7 +157,7 @@ const SeatLayout = ({selectedSeats,handleSelectedSeats}) => {
                     {seatsFour2.map((seatNo) => (
                       <li
                         className="single-seat"
-                        onClick={() => handleSelectedSeats(seatNo, rowName)}
+                        onClick={() => handleSelectedSeats(rowName + seatNo)}
                       >
                         <img
                           src={

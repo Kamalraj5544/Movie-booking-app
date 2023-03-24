@@ -2,6 +2,7 @@ import "./SeatPlanHome.scss";
 
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+
 import axios from "axios";
 
 import NavBar from "../../../NavBar/NavBar";
@@ -14,6 +15,7 @@ const SeatPlanHome = () => {
   const [cinema, setCinema] = useState({})
   const [availableTimings, setAvailableTimings] = useState([])
   const { movieId, movieDetailsId } = useParams();
+
 
   useEffect(() => {
     axios.get("http://localhost:4000/api/movie/" + movieId).then((response) => {
