@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Providers } from "react-redux";
+import { Provider } from "react-redux";
 
 import { store } from "../../store/store";
 
@@ -12,7 +12,7 @@ import TicketPlanHome from "../Booking/TicketPlanPage/TicketPlanHome/TicketPlanH
 
 const RouteingPages = () => {
   return (
-    <Providers store={store} >
+    <Provider store={store} >
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,7 +29,7 @@ const RouteingPages = () => {
           />
         </Routes>
       </Router>
-    </Providers>
+    </Provider>
   );
 };
 

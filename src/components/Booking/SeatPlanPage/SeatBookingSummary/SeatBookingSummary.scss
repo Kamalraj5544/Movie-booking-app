@@ -1,0 +1,39 @@
+.proceed-book {
+    width: 95%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .proceed-book-bg {
+    background: url("../../../../assets/proceed-book-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 15px;
+    filter: blur(2px);
+    opacity: 0.85;
+  }
+  
+  .proceed-to-book {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .book-item-header {
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .all-seats,
+  .total-price {
+    color: #31d7a9;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+  

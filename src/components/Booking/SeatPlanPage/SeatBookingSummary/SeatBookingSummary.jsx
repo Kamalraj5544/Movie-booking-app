@@ -1,20 +1,20 @@
 import "./SeatBookingSummary.scss";
 
-const SeatBookingSummary = ({seatsState}) => {
+const SeatBookingSummary = ({ seatsState }) => {
   return (
     <div className="proceed-book">
       <div className="proceed-book-bg"></div>
       <div className="proceed-to-book">
         <div>
           <div className="book-item-header">You Have Choosed Seat</div>
-          {seatsState.seats.map((seat, i) => (
+          {seatsState.selectedSeats.map((seat, i) => (
             <span className="all-seats pr-1">
               {seat}
-              {i !== seatsState.seats.length - 1 && ","}
+              {i !== seatsState.selectedSeats.length - 1 && ","}
             </span>
           ))}
 
-          {seatsState.seats.length === 0 && (
+          {seatsState.selectedSeats.length === 0 && (
             <span className="all-seats">-</span>
           )}
         </div>
