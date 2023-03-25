@@ -12,13 +12,13 @@ const bookingSlice = createSlice({
         
         selectSeatFunc : (state,action) => {
             state.selectedSeats.push(action.payload)
-            state.price += 120;
+            state.price = state.selectedSeats.length*150;
         },
         
         removeSeatFunc : (state,action) => {
             const removeIndex = state.selectedSeats.indexOf(action.payload);
             state.selectedSeats.splice(removeIndex, 1);
-            state.price -= 120;
+            state.price = state.selectedSeats.length*150;
         }
 
     }

@@ -1,4 +1,5 @@
 import NavBar from "../../../components/NavBar/NavBar";
+import Footer from "../../Footer/Footer";
 import Cover from "../Cover/Cover";
 import MoviePanel from "../MovieSection/MoviePanel/MoviePanel";
 
@@ -17,6 +18,7 @@ const Home = () => {
         <SearchPanel />
         <MoviePanel />
       </div>
+      <Footer />
     </div>
   );
 };
