@@ -113,7 +113,7 @@
 .subscription-email::placeholder {
   color: #99abe2 !important;
   @media screen and (max-width: 492px) {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -121,14 +121,13 @@
   outline: none;
 }
 
-.subs-btn{
-
+.subs-btn {
   @media screen and (max-width: 492px) {
     width: 100%;
   }
 }
 
-.bottom-area{
+.bottom-area {
   padding-top: 21rem;
 
   @media screen and (max-width: 492px) {
@@ -154,8 +153,6 @@
 
 .footer-top {
   border-bottom: 1px solid #99abe2;
-
-  
 }
 
 .links {

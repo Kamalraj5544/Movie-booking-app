@@ -8,6 +8,7 @@ import NavBar from "../../../NavBar/NavBar";
 import BookingHeader from "../../BookingHeader/BookingHeader";
 import TicketPlanSearchBar from "../TicketPlanSearchBar/TicketPlanSearchBar";
 import TicketPlanSection from "../TicketPlanSection/TicketPlanSection";
+import Footer from "../../../Footer/Footer";
 
 const TicketPlanHome = () => {
   const [movie, setMovie] = useState({});
@@ -62,6 +63,7 @@ const TicketPlanHome = () => {
         handleFilterDetails={handleFilterDetails}
       />
       <TicketPlanSection ticketDetails={filteredDetails} />
+      <Footer />
     </div>
   );
 };

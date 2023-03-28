@@ -9,6 +9,7 @@ import NavBar from "../../../NavBar/NavBar";
 import BookingHeader from "../../BookingHeader/BookingHeader";
 import SeatPlanBar from "../SeatPlanBar/SeatPlanBar";
 import SeatPlanSection from "../SeatPlanSection/SeatPlanSection";
+import Footer from "../../../Footer/Footer";
 
 const SeatPlanHome = () => {
   const [movie, setMovie] = useState({});
@@ -42,6 +43,7 @@ const SeatPlanHome = () => {
       <BookingHeader movie={movie} cinema={cinema}/>
       <SeatPlanBar availableTimings={availableTimings} />
       <SeatPlanSection />
+      <Footer />
     </div>
   );
 };

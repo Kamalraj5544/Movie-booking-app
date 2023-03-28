@@ -18,6 +18,7 @@ const UserReview = ({ movie }) => {
               {movie.rating}/10
             </h4>
           </div>
+          <hr />
         </TabPanel>
         <TabPanel header="User review(87)">
           {movie.userReviews &&

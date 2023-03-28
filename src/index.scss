@@ -110,7 +110,7 @@ input::placeholder{
 }
 
 .pi {
-  color: #31d7a9 !important;
+  color: var(--teal) !important;
 }
 
 .p-avatar img {
@@ -119,6 +119,4 @@ input::placeholder{
 }
 
 
-.red-color {
-  color: red;
-}
+

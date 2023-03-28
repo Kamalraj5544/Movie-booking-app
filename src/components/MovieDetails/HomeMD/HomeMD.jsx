@@ -5,6 +5,7 @@ import axios from "axios";
 import NavBar from "../../NavBar/NavBar";
 import CoverMD from "../CoverMD/CoverMD";
 import UserReview from "../UserReview/UserReview";
+import Footer from "../../Footer/Footer";
 
 import "./HomeMD.scss";
 
@@ -25,6 +26,7 @@ const HomeMd = () => {
       <NavBar />
       <CoverMD movie={movie} />
       <UserReview movie={movie} />
+      <Footer />
     </div>
   );
 };
