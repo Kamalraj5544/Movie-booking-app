@@ -1,12 +1,12 @@
 import "./TicketPlanSection.scss";
 
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { useParams } from "react-router-dom";
-
 import { RiEmotionSadLine } from "react-icons/ri";
+import { setMovieDetailsIdFunc } from "../../../../store/reducers/BookingReducer";
+import { useDispatch } from "react-redux";
 
 const TicketPlanSection = ({ticketDetails}) => {
+
+  const dispatch = useDispatch();
 
   return (
     <div className="ticket-plan-section">
@@ -38,6 +38,7 @@ const TicketPlanSection = ({ticketDetails}) => {
                               "/seatplan/" +
                               details._id
                             }
+                            onClick={ () => dispatch(setMovieDetailsIdFunc(details._id))}
                           >
                             {timing.time}
                           </a>
@@ -45,7 +46,7 @@ const TicketPlanSection = ({ticketDetails}) => {
                     </div>
                   </li>
                 ))}
-
+                
               {ticketDetails && ticketDetails.length === 0 && (
                 <div className="flex-center flex-row p-4 shake-effect">
                   <span className="pi bold">

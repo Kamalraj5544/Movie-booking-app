@@ -1,6 +1,10 @@
 import axios from "axios";
+
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+
+import { setMovieIdFunc } from "../../../../store/reducers/BookingReducer";
 
 import MovieCard from "../MovieCard/MovieCard";
 
@@ -8,7 +12,7 @@ import "./MoviePanel.scss";
 
 const MoviePanel = () => {
   const [movies, setMovies] = useState([]);
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     axios.get("http://localhost:4000/api/movie").then((response) => {
@@ -39,7 +43,7 @@ const MoviePanel = () => {
               <div
                 className="col-md-3 moviecard"
                 key={movie._id}
-                // onClick={() => navigate("/movie/" + movie._id)}
+                onClick={() => dispatch(setMovieIdFunc(movie._id))}
               >
                 <Link to={`/movie/${movie._id}`}>
                   <MovieCard movie={movie} />

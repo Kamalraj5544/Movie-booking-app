@@ -19,7 +19,6 @@ const TicketPlanHome = () => {
   const { movieId } = useParams();
 
   const handleFilterDetails = (city) => {
-    console.log(city);
     if (city != null && city != "All") {
       const toFilterDetails = [...ticketDetails].filter(
         (details) => details.city === city

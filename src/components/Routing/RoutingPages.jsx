@@ -9,6 +9,7 @@ import SignIn from "../Users/Sign-in/SignIn";
 import SignUp from "../Users/Sign-up/SignUp";
 import SeatPlanHome from "../Booking/SeatPlanPage/SeatPlanHome/SeatPlanHome";
 import TicketPlanHome from "../Booking/TicketPlanPage/TicketPlanHome/TicketPlanHome";
+import CheckoutHome from "../Booking/CheckoutPage/CheckoutHome/CheckoutHome";
 
 const RouteingPages = () => {
   return (
@@ -26,6 +27,10 @@ const RouteingPages = () => {
           <Route
             path="/movie/:movieId/seatplan/:movieDetailsId"
             element={<SeatPlanHome />}
+          />
+          <Route
+            path="/movie/checkout"
+            element={<CheckoutHome />}
           />
         </Routes>
       </Router>

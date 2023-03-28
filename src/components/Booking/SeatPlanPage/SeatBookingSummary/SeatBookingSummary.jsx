@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
+import { bookingSelector } from "../../../../store/reducers/BookingReducer";
 import "./SeatBookingSummary.scss";
 
 const SeatBookingSummary = ({ seatsState }) => {
+
   return (
     <div className="proceed-book">
       <div className="proceed-book-bg"></div>
@@ -23,7 +26,10 @@ const SeatBookingSummary = ({ seatsState }) => {
           <div className="total-price">Rs.{seatsState.price}</div>
         </div>
         <div>
-          <button className="custom-btn">proceed</button>
+        <a href="/movie/checkout">
+        <button className="custom-btn">proceed</button>
+        </a>
+          
         </div>
       </div>
     </div>

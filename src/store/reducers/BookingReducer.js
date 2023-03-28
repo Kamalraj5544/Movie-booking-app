@@ -2,7 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     selectedSeats:[],
-    price:0
+    price:0,
+    movieId:"",
+    movieDetailsId:"",
 }
 
 const bookingSlice = createSlice({
@@ -19,6 +21,15 @@ const bookingSlice = createSlice({
             const removeIndex = state.selectedSeats.indexOf(action.payload);
             state.selectedSeats.splice(removeIndex, 1);
             state.price = state.selectedSeats.length*150;
+        },
+
+        setMovieIdFunc : (state,action) => {
+            console.log(action.payload)
+            state.movieId = action.payload;
+        },
+
+        setMovieDetailsIdFunc : (state,action) => {
+            state.movieId = action.payload;
         }
 
     }
@@ -28,7 +39,7 @@ const bookingSlice = createSlice({
 export const bookingReducer = bookingSlice.reducer;
 
 // exoporting actions for dispatch  where we want
-export const {selectSeatFunc,removeSeatFunc} = bookingSlice.actions;
+export const {selectSeatFunc,removeSeatFunc,setMovieIdFunc,setMovieDetailsIdFunc} = bookingSlice.actions;
 
 // exoporting selector for retrieving state
 export const bookingSelector = (state) => state.bookingReducer

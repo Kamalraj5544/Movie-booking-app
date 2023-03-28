@@ -38,13 +38,13 @@ const SeatPlanHome = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <NavBar />
       <BookingHeader movie={movie} cinema={cinema}/>
       <SeatPlanBar availableTimings={availableTimings} />
       <SeatPlanSection />
       <Footer />
-    </div>
+    </>
   );
 };
 
