@@ -1,5 +1,8 @@
 .footer-section {
   position: relative;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-bg {
@@ -11,20 +14,6 @@
   height: 100%;
   z-index: -1;
 
-  // -webkit-mask-image: url("../../assets/footer-bg.png");
-  // mask-image:url("../../assets/footer-bg.png");
-
-  // -webkit-mask-position: top center;
-  // mask-position: top center;
-
-  // -webkit-mask-repeat: no-repeat;
-  // mask-repeat: no-repeat;
-
-  // mask-size: cover;
-  // -webkit-mask-size: cover;
-
-  // background: #0a1e5e;
-
   background-image: url("../../assets/footer-bg.png");
   background-position: top center;
   background-size: cover;
@@ -32,7 +21,11 @@
 }
 
 .newsletter-section {
-  padding-bottom: 6rem;
+  position: absolute;
+  top: -7rem;
+  left: 0;
+  right: 0;
+  z-index: 0;
 }
 
 .newsletter-container {
@@ -87,7 +80,6 @@
 }
 
 .subscribtion-form {
-  position: relative;
   border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 25px;
   width: 60%;
@@ -95,6 +87,11 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.8rem;
+
+  @media screen and (max-width: 460px) {
+    border: none;
+    flex-direction: column;
+  }
 }
 
 .subscription-email {
@@ -104,14 +101,39 @@
   height: 2.8rem;
   border: none;
   padding: 1rem;
+
+  @media screen and (max-width: 492px) {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    margin: 1rem;
+    padding: 0;
+  }
 }
 
 .subscription-email::placeholder {
   color: #99abe2 !important;
+  @media screen and (max-width: 492px) {
+    font-size: .9rem;
+  }
 }
 
 .subscription-email:focus {
   outline: none;
+}
+
+.subs-btn{
+
+  @media screen and (max-width: 492px) {
+    width: 100%;
+  }
+}
+
+.bottom-area{
+  padding-top: 21rem;
+
+  @media screen and (max-width: 492px) {
+    padding-top: 30rem;
+  }
 }
 
 .footer-top,
@@ -132,6 +154,8 @@
 
 .footer-top {
   border-bottom: 1px solid #99abe2;
+
+  
 }
 
 .links {

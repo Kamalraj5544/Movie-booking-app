@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="bottom-area container">
         <div className="footer-top">
           <div className="footer-logo">
             <a href="/">
@@ -41,19 +41,15 @@ const Footer = () => {
               <i className="pi pi-facebook"></i>
             </li>
             <li>
-              {" "}
               <i className="pi pi-twitter"></i>
             </li>
             <li>
-              {" "}
               <i className="pi pi-instagram"></i>
             </li>
             <li>
-              {" "}
               <i className="pi pi-google"></i>
             </li>
             <li>
-              {" "}
               <i className="pi pi-youtube"></i>
             </li>
           </ul>
