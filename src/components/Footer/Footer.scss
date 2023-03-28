@@ -1,0 +1,175 @@
+.footer-section {
+  position: relative;
+}
+
+.footer-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  // -webkit-mask-image: url("../../assets/footer-bg.png");
+  // mask-image:url("../../assets/footer-bg.png");
+
+  // -webkit-mask-position: top center;
+  // mask-position: top center;
+
+  // -webkit-mask-repeat: no-repeat;
+  // mask-repeat: no-repeat;
+
+  // mask-size: cover;
+  // -webkit-mask-size: cover;
+
+  // background: #0a1e5e;
+
+  background-image: url("../../assets/footer-bg.png");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.newsletter-section {
+  padding-bottom: 6rem;
+}
+
+.newsletter-container {
+  padding: 4rem 2rem;
+  border-radius: 25px;
+  background-image: url("../../assets/newsletter-bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+
+.newsletter-container::after {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(0deg, #7400ba 0%, #0f5ae0 100%);
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px;
+}
+
+.newsletter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+
+  .subscribtion-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 1.4rem;
+  }
+  .subscribtion-subheader {
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding-bottom: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  p {
+    font-size: large;
+    letter-spacing: 0.3px;
+  }
+}
+
+.subscribtion-form {
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.subscription-email {
+  background: transparent;
+  color: #99abe2;
+  width: 100%;
+  height: 2.8rem;
+  border: none;
+  padding: 1rem;
+}
+
+.subscription-email::placeholder {
+  color: #99abe2 !important;
+}
+
+.subscription-email:focus {
+  outline: none;
+}
+
+.footer-top,
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  padding: 1.2rem 0;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    padding-bottom: 0;
+  }
+}
+
+.footer-top {
+  border-bottom: 1px solid #99abe2;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.1rem;
+
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.footer-top .links li i {
+  border-radius: 100%;
+  border: 1px solid #99abe2;
+  cursor: pointer;
+  padding: 0.8rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff !important;
+}
+
+.footer-top .links li i:hover {
+  background-color: #31d7a9;
+}
+.footer-bottom .links li:hover {
+  cursor: pointer;
+  color: #31d7a9;
+}
+
+.footer-logo a img {
+  object-fit: cover;
+  width: 20rem;
+  height: 5rem;
+}
+
+.footer-bottom-left span {
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-family: monospace;
+}

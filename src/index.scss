@@ -1,5 +1,8 @@
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -8,7 +11,7 @@ body {
   font-size: 16px;
   color: #dbe2fb;
   line-height: 28px;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
   background: #001232;
 }
@@ -81,7 +84,6 @@ input::placeholder{
 .p-tabview-nav-link {
   background-color: #001232 !important;
   color: #31d7a9 !important;
-  // text-transform: uppercase;
 }
 
 .p-tabview .p-tabview-panels {
@@ -114,4 +116,9 @@ input::placeholder{
 .p-avatar img {
   object-fit: cover;
   border: 3.5px solid #31d7a9;
+}
+
+
+.red-color {
+  color: red;
 }

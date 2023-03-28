@@ -29,7 +29,7 @@ const SearchPanel = () => {
     <div className="search-ticket-section" id="search-section">
       <div className="search-container">
         <div className="search-section-bgImg"></div>
-        <div className="search-header text-center">
+        <div className="search-header text-center container">
           <p className="welcome-section">
             <span className="teal-color uppercase">
               welcome to book my ticket
