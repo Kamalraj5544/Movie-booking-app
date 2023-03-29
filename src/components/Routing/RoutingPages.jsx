@@ -29,7 +29,7 @@ const RouteingPages = () => {
             element={<SeatPlanHome />}
           />
           <Route
-            path="/movie/checkout"
+            path="/movie/:movieId/checkout/:movieDetailsId"
             element={<CheckoutHome />}
           />
         </Routes>

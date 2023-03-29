@@ -1,8 +1,13 @@
 import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+
 import { bookingSelector } from "../../../../store/reducers/BookingReducer";
+
 import "./SeatBookingSummary.scss";
 
 const SeatBookingSummary = ({ seatsState }) => {
+
+  const {movieId , movieDetailsId } = useParams();
 
   return (
     <div className="proceed-book">
@@ -26,7 +31,7 @@ const SeatBookingSummary = ({ seatsState }) => {
           <div className="total-price">Rs.{seatsState.price}</div>
         </div>
         <div>
-        <a href="/movie/checkout">
+        <a href={`/movie/${movieId}/checkout/${movieDetailsId}`}>
         <button className="custom-btn">proceed</button>
         </a>
           
