@@ -27,13 +27,10 @@ const SeatPlanHome = () => {
     axios
       .get("http://localhost:4000/api/movie/cinema/" + movieId)
       .then((response) => {
-        console.log(response.data);
         const currentCinema = response.data.find(cinema => cinema._id === movieDetailsId)
-        console.log(currentCinema);
         const cinemaTimings = currentCinema.timings.map((details) => ({time : details.time}));
         setCinema({...currentCinema})
         setAvailableTimings([...cinemaTimings])
-        console.log(cinema);
       });
   }, []);
 

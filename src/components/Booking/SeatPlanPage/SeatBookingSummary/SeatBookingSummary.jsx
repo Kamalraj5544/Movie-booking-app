@@ -1,7 +1,4 @@
-import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-
-import { bookingSelector } from "../../../../store/reducers/BookingReducer";
 
 import "./SeatBookingSummary.scss";
 
