@@ -1,0 +1,84 @@
+.checkout-section {
+  padding: 5rem 0;
+}
+
+.checkout-widget {
+  padding: 2rem;
+  margin-bottom: 3rem;
+  background: #032055;
+}
+
+.checkout-widget p {
+  color: #9aace5;
+}
+
+.widget-title {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+}
+
+.checkout-signin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.user-icon {
+  background-image: -webkit-linear-gradient(
+    150deg,
+    #5560ff 18%,
+    #aa52a1 63%,
+    #ff4343 100%
+  );
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+
+.signin-area span {
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.checkout-contact h4 {
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed #11326f;
+  margin-bottom:2rem ;
+}
+
+.checkout-contact-form {
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+//   @media screen and (max-width: 576px) {
+//     flex-direction: column;
+//   }
+}
+
+.checkout-contact-form .form-group {
+    margin-bottom: 30px;
+    width: 50%;
+
+    @media screen and (max-width: 576px) {
+        width: 100%;
+      }
+}
+
+.form-group input {
+
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #11326f;
+  width: 80%;
+}
+.form-group input:focus {
+  outline: none;
+}
+.form-group input::placeholder {
+    font-size: .95rem;
+  color: #9aace5 !important;
+}

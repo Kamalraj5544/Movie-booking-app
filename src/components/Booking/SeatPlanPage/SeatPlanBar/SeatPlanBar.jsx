@@ -7,28 +7,16 @@ import { useParams } from "react-router-dom";
 
 const SeatPlanBar = ({ availableTimings }) => {
   const [selectedTime, setSelectedTime] = useState(null);
-  const [tenMins, settenMins] = useState({
-    mins: "",
-    secs : 60,
-  })
+
+  const [secs, setSecs] = useState(599);
   const { movieId } = useParams();
 
-  const counterFun = () => {
-    const extraTenMin = Math.floor(Date.now() / (1000*60)) + 9;
-    const sixty = Math.floor(Date.now() / 1000) + 60;
-    const intervalId = setInterval(() => {
-      const currentMin = Math.floor(Date.now() / (1000*60));
-      if (extraTenMin - currentMin <= 0) clearInterval(intervalId);
-      settenMins({
-        ...tenMins,
-        mins: extraTenMin-currentMin,
-        secs: sixty-Math.floor(Date.now() / 1000) ,
-      })
-    }, 1000);
-  };
 
   useEffect(() => {
-    counterFun();
+    const intervalId = setInterval(() => {
+      setSecs((prevSecs) => prevSecs - 1)
+    }, 1000);
+    return () => clearInterval(intervalId)
   }, []);
 
   return (
@@ -64,7 +52,9 @@ const SeatPlanBar = ({ availableTimings }) => {
         </div>
 
         <div className="form-group flex-column">
-          <div className="text-4xl font-semibold ">0{tenMins.mins} : {tenMins.secs}</div>
+          <div className="text-4xl font-semibold ">
+          0{Math.floor(secs / 60)}:{secs % 60 < 10 ? '0' + (secs % 60) : secs % 60}
+          </div>
           <div>Mins left</div>
         </div>
       </form>

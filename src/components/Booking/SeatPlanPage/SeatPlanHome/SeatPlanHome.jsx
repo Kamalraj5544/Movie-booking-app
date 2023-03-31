@@ -20,7 +20,6 @@ const SeatPlanHome = () => {
 
   useEffect(() => {
     axios.get("http://localhost:4000/api/movie/" + movieId).then((response) => {
-      console.log(response.data);
       setMovie(response.data);
     });
 

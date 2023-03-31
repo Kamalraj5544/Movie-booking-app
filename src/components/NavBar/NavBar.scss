@@ -85,10 +85,6 @@
   width: 10rem;
   height: 2.8rem;
   text-transform: uppercase;
-
-  @media screen and (max-width: 992px) {
-    width: 50%;
-  }
 }
 
 .custom-btn:hover {

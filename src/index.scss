@@ -1,4 +1,8 @@
 
+:root{
+  --teal : #31d7a9 !important;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,6 +24,7 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
 
 ul{
   padding-inline-start: 0;

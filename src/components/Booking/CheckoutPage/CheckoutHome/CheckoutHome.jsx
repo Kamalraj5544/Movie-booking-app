@@ -4,10 +4,12 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 import NavBar from "../../../NavBar/NavBar";
+import Footer from "../../../Footer/Footer";
 import BookingHeader from "../../BookingHeader/BookingHeader";
 import SeatPlanBar from "../../SeatPlanPage/SeatPlanBar/SeatPlanBar";
 
 import "./CheckoutHome.scss"
+import CheckoutSection from "../CheckoutSection/CheckoutSection";
 
 const CheckoutHome = () => {
   const [movie, setMovie] = useState({});
@@ -37,6 +39,8 @@ const CheckoutHome = () => {
     <NavBar />
     <BookingHeader movie={movie} cinema={cinema} />
     <SeatPlanBar availableTimings={availableTimings} />
+    <CheckoutSection />
+    <Footer />
     </>
   )
 }
