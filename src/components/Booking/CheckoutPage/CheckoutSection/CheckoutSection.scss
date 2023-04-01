@@ -13,8 +13,11 @@
 }
 
 .widget-title {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5em;
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed #11326f;
+  margin-bottom: 2rem;
 }
 
 .checkout-signin {
@@ -41,11 +44,6 @@
   margin-left: 10px;
 }
 
-.checkout-contact h4 {
-  padding-bottom: 2rem;
-  border-bottom: 1px dashed #11326f;
-  margin-bottom:2rem ;
-}
 
 .checkout-contact-form {
   display: flex;
@@ -54,31 +52,96 @@
   align-items: center;
   flex-wrap: wrap;
 
-//   @media screen and (max-width: 576px) {
-//     flex-direction: column;
-//   }
+  @media screen and (max-width: 576px) {
+    text-align: center;
+  }
 }
 
 .checkout-contact-form .form-group {
-    margin-bottom: 30px;
-    width: 50%;
+  margin-bottom: 2.5rem;
+  padding-right: 2.5rem;
+  width: 47%;
 
-    @media screen and (max-width: 576px) {
-        width: 100%;
-      }
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
 }
 
 .form-group input {
-
   background-color: transparent;
   border: 0;
   border-bottom: 1px solid #11326f;
-  width: 80%;
+  // width: 100%;
+  color: #ffffff;
+  padding-left: 0.5rem;
 }
+
 .form-group input:focus {
   outline: none;
 }
+
 .form-group input::placeholder {
-    font-size: .95rem;
+  font-size: 0.95rem;
   color: #9aace5 !important;
+}
+
+.payment-form {
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.payment-form .form-group {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.payment-form .form-group:nth-child(3) {
+  width: 45%;
+}
+.payment-form .form-group:nth-child(4) {
+  width: 45%;
+}
+
+.checkout-payment .form-group input {
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #11326f;
+}
+
+.check-group {
+  display: flex;
+  flex-direction: row;
+
+  input {
+    width: 2.5rem;
+    height: 2.5rem;
+    clip-path: circle(31% at 50% 50%);
+  }
+
+  label {
+    padding-left: 1rem;
+
+    .checkbox-title {
+      font-size: 1.2rem;
+    }
+
+    span {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.form-group label {
+  margin-bottom: .5rem;
+  font-weight: 400;
+}
+
+.booking-payment-details{
+  background-color: #032055;
+  padding: 2rem;
 }
