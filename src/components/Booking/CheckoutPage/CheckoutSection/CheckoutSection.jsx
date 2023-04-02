@@ -1,6 +1,6 @@
 import "./CheckoutSection.scss";
 
-const CheckoutSection = () => {
+const CheckoutSection = ({movie,cinema}) => {
   return (
     <div className="checkout-section">
       <div className="container">
@@ -92,12 +92,12 @@ const CheckoutSection = () => {
               <h3 className="widget-title text-center">BOOKING SUMMARY</h3>
               <ul>
                 <li>
-                  <h5 className="subTitle">Venus</h5>
+                  <h5 className="subTitle">{movie.name}</h5>
                   <span>2D</span>
                 </li>
                 <li>
                   <h5 className="subTitle">
-                    <div>CITY WALK</div>
+                    <div>{cinema.name}</div>
                     <div>02</div>
                   </h5>
                   <div className="info">

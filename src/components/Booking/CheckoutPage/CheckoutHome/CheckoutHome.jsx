@@ -39,7 +39,7 @@ const CheckoutHome = () => {
     <NavBar />
     <BookingHeader movie={movie} cinema={cinema} />
     <SeatPlanBar availableTimings={availableTimings} />
-    <CheckoutSection />
+    <CheckoutSection movie={movie} cinema={cinema} />
     <Footer />
     </>
   )

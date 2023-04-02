@@ -14,7 +14,7 @@ const BookingHeader = ({ movie,cinema }) => {
           {movie.languages &&
             movie.languages.map((language, index) => (
               <span key={index + language} className="p-1 text-base">
-                {language}
+                {language}{index !== movie.languages.length-1 ? "," : ""}
               </span>
             ))}
             <span className="teal-color p-1 text-2xl"> | {" "}</span> 
