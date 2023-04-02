@@ -67,11 +67,14 @@ const CheckoutSection = () => {
                 </div>
                 <div className="form-group w-full">
                   <div className="check-group">
-                  <input type="checkbox"/>
-                  <label>
-                    <div className="checkbox-title">QuickPay</div>
-                    <span>Save this card information to my Boleto account and make faster payments.</span>
-                  </label>
+                    <input type="checkbox" />
+                    <label>
+                      <div className="checkbox-title">QuickPay</div>
+                      <span>
+                        Save this card information to my Boleto account and make
+                        faster payments.
+                      </span>
+                    </label>
                   </div>
                 </div>
                 <div className="form-group w-full">
@@ -86,9 +89,49 @@ const CheckoutSection = () => {
           </div>
           <div className="col-md-4">
             <div className="booking-payment-details">
-            <h3 className="widget-title text-center">BOOKING SUMMARY</h3>
+              <h3 className="widget-title text-center">BOOKING SUMMARY</h3>
+              <ul>
+                <li>
+                  <h5 className="subTitle">Venus</h5>
+                  <span>2D</span>
+                </li>
+                <li>
+                  <h5 className="subTitle">
+                    <div>CITY WALK</div>
+                    <div>02</div>
+                  </h5>
+                  <div className="info">
+                    <span>10 SEP TUE, 11:00 PM</span>
+                    <span>Tickets</span>
+                  </div>
+                </li>
+                <li>
+                  <h5 className="subTitle">
+                    <div>tickets price</div>
+                    <div>RS.150</div>
+                  </h5>
+                </li>
+              </ul>
+              <ul className="side-shape">
+                <li>
+                  <span className="info">
+                    <span>total price</span>
+                    <span>Rs.300</span>
+                  </span>
+                  <span className="info">
+                    <span>GST</span>
+                    <span>Rs.6</span>
+                  </span>
+                </li>
+              </ul>
             </div>
-            <div className="total-payment-area"></div>
+            <div className="total-payment-area text-center">
+              <h5 className="subTitle">
+                <span>Amount Payable</span>
+                <span>Rs.306</span>
+              </h5>
+              <button className="custom-btn">Proceed</button>
+            </div>
           </div>
         </div>
       </div>

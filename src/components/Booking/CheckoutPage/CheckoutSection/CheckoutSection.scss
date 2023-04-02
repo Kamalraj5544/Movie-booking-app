@@ -1,5 +1,6 @@
 .checkout-section {
   padding: 5rem 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .checkout-widget {
@@ -44,7 +45,6 @@
   margin-left: 10px;
 }
 
-
 .checkout-contact-form {
   display: flex;
   -ms-flex-pack: justify;
@@ -74,6 +74,10 @@
   // width: 100%;
   color: #ffffff;
   padding-left: 0.5rem;
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
 }
 
 .form-group input:focus {
@@ -137,11 +141,80 @@
 }
 
 .form-group label {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-weight: 400;
 }
 
-.booking-payment-details{
+.booking-payment-details {
   background-color: #032055;
   padding: 2rem;
+}
+
+.booking-payment-details ul {
+  border-bottom: 1px dashed #11326f;
+}
+
+.booking-payment-details ul li {
+  margin: 1.5rem 0;
+}
+
+.booking-payment-details ul li span {
+  color: #9aace5;
+  text-transform: uppercase;
+}
+
+.subTitle {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+
+  // color: #ffffff !important;
+
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side-shape {
+  position: relative;
+}
+
+.side-shape::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #001232;
+  top: -3.5rem;
+  left: -3.5rem;
+  bottom: 0;
+  right: 0;
+}
+.side-shape::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #001232;
+  top: -3.5rem;
+  right: -3.5rem;
+}
+
+.total-payment-area {
+  background: #05245c;
+  padding: 2.5rem;
+
+  .custom-btn {
+    margin-top: 1rem;
+  }
 }
