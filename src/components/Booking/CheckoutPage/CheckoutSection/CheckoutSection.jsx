@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
 import "./CheckoutSection.scss";
-import { bookingSelector } from "../../../../store/reducers/BookingReducer";
+
 
 const CheckoutSection = ({movie,cinema}) => {
 
-  // const seatsState = useSelector(bookingSelector);
+  const seatsState = useSelector((state) => state.persistorReducer);
 
   return (
     <div className="checkout-section">

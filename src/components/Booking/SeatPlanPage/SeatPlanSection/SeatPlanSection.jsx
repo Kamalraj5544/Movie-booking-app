@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import {
-  bookingSelector,
   selectSeatFunc,
   removeSeatFunc,
 } from "../../../../store/reducers/BookingReducer";
@@ -13,11 +12,11 @@ import "./SeatPlanSection.scss";
 const SeatPlanSection = () => {
 
   const dispatch = useDispatch();
-  const seatsState = useSelector(bookingSelector);
+  const seatsState = useSelector((state) => state.persistorReducer);
 
   console.log(seatsState)
 
-  // const [seatsState, setSeatsState] = useState({
+ // const [seatsState, setSeatsState] = useState({
   //   seats: [],
   //   price: 0,
   // });
@@ -34,7 +33,7 @@ const SeatPlanSection = () => {
     } else {
       copyOfSelectedSeats.push(seatNo);
     }
-    setSeatsState({
+   setSeatsState({
       ...seatsState,
       seats: [...copyOfSelectedSeats],
       price: copyOfSelectedSeats.length * 120,

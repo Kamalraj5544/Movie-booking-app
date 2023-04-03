@@ -1,9 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Provider } from "react-redux";
-
-import { PersistGate } from "redux-persist/integration/react";
-
-import {persistor, store } from "../../store/store";
 
 import Home from "../HomePage/Home/Home";
 import HomeMd from "../MovieDetails/HomeMD/HomeMd";
@@ -15,30 +10,26 @@ import CheckoutHome from "../Booking/CheckoutPage/CheckoutHome/CheckoutHome";
 
 const RouteingPages = () => {
   return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/movie/:movieId" element={<HomeMd />} />
-            <Route
-              path="/movie/:movieId/ticketplan"
-              element={<TicketPlanHome />}
-            />
-            <Route
-              path="/movie/:movieId/seatplan/:movieDetailsId"
-              element={<SeatPlanHome />}
-            />
-            <Route
-              path="/movie/:movieId/checkout/:movieDetailsId"
-              element={<CheckoutHome />}
-            />
-          </Routes>
-        </Router>
-      </PersistGate>
-    </Provider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/movie/:movieId" element={<HomeMd />} />
+          <Route
+            path="/movie/:movieId/ticketplan"
+            element={<TicketPlanHome />}
+          />
+          <Route
+            path="/movie/:movieId/seatplan/:movieDetailsId"
+            element={<SeatPlanHome />}
+          />
+          <Route
+            path="/movie/:movieId/checkout/:movieDetailsId"
+            element={<CheckoutHome />}
+          />
+        </Routes>
+      </Router>
   );
 };
 
