@@ -15,6 +15,8 @@ const SeatPlanSection = () => {
   const dispatch = useDispatch();
   const seatsState = useSelector(bookingSelector);
 
+  console.log(seatsState)
+
   // const [seatsState, setSeatsState] = useState({
   //   seats: [],
   //   price: 0,

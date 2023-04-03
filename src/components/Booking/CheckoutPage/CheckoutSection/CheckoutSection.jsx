@@ -1,6 +1,11 @@
+import { useSelector } from "react-redux";
 import "./CheckoutSection.scss";
+import { bookingSelector } from "../../../../store/reducers/BookingReducer";
 
 const CheckoutSection = ({movie,cinema}) => {
+
+  // const seatsState = useSelector(bookingSelector);
+
   return (
     <div className="checkout-section">
       <div className="container">
@@ -98,7 +103,7 @@ const CheckoutSection = ({movie,cinema}) => {
                 <li>
                   <h5 className="subTitle">
                     <div>{cinema.name}</div>
-                    <div>02</div>
+                    <div>{seatsState.selectedSeats.length}</div>
                   </h5>
                   <div className="info">
                     <span>10 SEP TUE, 11:00 PM</span>
@@ -108,7 +113,7 @@ const CheckoutSection = ({movie,cinema}) => {
                 <li>
                   <h5 className="subTitle">
                     <div>tickets price</div>
-                    <div>RS.150</div>
+                    <div>{seatsState.price}</div>
                   </h5>
                 </li>
               </ul>
