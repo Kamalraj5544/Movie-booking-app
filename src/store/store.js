@@ -5,6 +5,7 @@ import { bookingReducer } from "./reducers/BookingReducer";
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
 import thunk from 'redux-thunk';
+import { movieReducer } from "./reducers/MovieReducer";
 
 const persistConfig = {
     key:"root",
@@ -13,6 +14,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     booking : bookingReducer,
+    movie : movieReducer
 })
 
 const persistedReducer= persistReducer(persistConfig,rootReducer);

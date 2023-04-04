@@ -1,5 +1,8 @@
 import { Card } from "primereact/card";
 
+import tomato from "../../../../assets/Movies/tomato.png";
+import cake from "../../../../assets/Movies/cake.png";
+
 import "./MovieCard.scss";
 
 const MovieCard = ({ movie }) => {
@@ -9,12 +12,12 @@ const MovieCard = ({ movie }) => {
       <hr />
       <div className="footer-card">
         <div>
-          <img src="https://pixner.net/boleto/demo/assets/images/movie/tomato.png" />
+          <img src={tomato} />
           &nbsp;&nbsp;
           <span>88%</span>
         </div>
         <div>
-          <img src="https://pixner.net/boleto/demo/assets/images/movie/cake.png" />
+          <img src={cake} />
           &nbsp;&nbsp;&nbsp;&nbsp;
           <span>88%</span>
         </div>

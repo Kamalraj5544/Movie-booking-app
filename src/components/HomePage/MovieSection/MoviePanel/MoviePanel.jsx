@@ -1,23 +1,27 @@
 import axios from "axios";
 
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { setMovieIdFunc } from "../../../../store/reducers/BookingReducer";
+import { setMovies } from "../../../../store/reducers/MovieReducer";
 
 import MovieCard from "../MovieCard/MovieCard";
 
 import "./MoviePanel.scss";
 
 const MoviePanel = () => {
-  const [movies, setMovies] = useState([]);
+  // const [movies, setMovies] = useState([]);
   const dispatch = useDispatch();
+  const {movies} = useSelector((state) => state.persistedReducer.movie)
+  console.log(movies)
+
 
   useEffect(() => {
     axios.get("http://localhost:4000/api/movie").then((response) => {
-      setMovies(response.data);
+      // setMovies(response.data);
       // console.log(response.data);
+      dispatch(setMovies(response.data))
     });
   }, []);
 

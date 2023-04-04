@@ -3,7 +3,6 @@ import "./Cover.scss";
 const Cover = () => {
   return (
     <div className="coverContainer">
-      {/* <div className="bg-img"></div> */}
       <div className="textcontainer">
         <div>
           <h1 className="cover-header">
