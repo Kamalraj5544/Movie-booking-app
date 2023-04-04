@@ -1,10 +1,8 @@
 import { useSelector } from "react-redux";
 import "./CheckoutSection.scss";
 
-
-const CheckoutSection = ({movie,cinema}) => {
-
-  const seatsState = useSelector((state) => state.persistorReducer);
+const CheckoutSection = ({ movie, cinema }) => {
+  const seatsState = useSelector((state) => state.persistedReducer.booking);
 
   return (
     <div className="checkout-section">
@@ -113,7 +111,10 @@ const CheckoutSection = ({movie,cinema}) => {
                 <li>
                   <h5 className="subTitle">
                     <div>tickets price</div>
-                    <div>{seatsState.price}</div>
+                    <div>
+                      <span>&#8377; </span>
+                      {seatsState.price}
+                    </div>
                   </h5>
                 </li>
               </ul>
@@ -121,11 +122,17 @@ const CheckoutSection = ({movie,cinema}) => {
                 <li>
                   <span className="info">
                     <span>total price</span>
-                    <span>Rs.300</span>
+                    <span>
+                      <span>&#8377; </span>
+                      {seatsState.price}
+                    </span>
                   </span>
                   <span className="info">
-                    <span>GST</span>
-                    <span>Rs.6</span>
+                    <span>GST(18%)</span>
+                    <span>
+                      <span>&#8377; </span>
+                      {seatsState.price * 0.18}
+                    </span>
                   </span>
                 </li>
               </ul>
@@ -133,7 +140,10 @@ const CheckoutSection = ({movie,cinema}) => {
             <div className="total-payment-area text-center">
               <h5 className="subTitle">
                 <span>Amount Payable</span>
-                <span>Rs.306</span>
+                <span>
+                  <span>&#8377; </span>
+                  {seatsState.price + seatsState.price * 0.18}
+                </span>
               </h5>
               <button className="custom-btn">Proceed</button>
             </div>

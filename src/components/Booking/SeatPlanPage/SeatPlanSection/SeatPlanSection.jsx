@@ -12,7 +12,7 @@ import "./SeatPlanSection.scss";
 const SeatPlanSection = () => {
 
   const dispatch = useDispatch();
-  const seatsState = useSelector((state) => state.persistorReducer);
+  const seatsState = useSelector((state) => state.persistedReducer.booking);
 
   console.log(seatsState)
 

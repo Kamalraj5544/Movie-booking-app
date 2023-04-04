@@ -3,8 +3,7 @@ import { useParams } from "react-router-dom";
 import "./SeatBookingSummary.scss";
 
 const SeatBookingSummary = ({ seatsState }) => {
-
-  const {movieId , movieDetailsId } = useParams();
+  const { movieId, movieDetailsId } = useParams();
 
   return (
     <div className="proceed-book">
@@ -25,13 +24,15 @@ const SeatBookingSummary = ({ seatsState }) => {
         </div>
         <div>
           <div className="book-item-header">Total Price</div>
-          <div className="total-price">Rs.{seatsState.price}</div>
+          <div className="total-price">
+            <span>&#8377; </span>
+            {seatsState.price}
+          </div>
         </div>
         <div>
-        <a href={`/movie/${movieId}/checkout/${movieDetailsId}`}>
-        <button className="custom-btn">proceed</button>
-        </a>
-          
+          <a href={`/movie/${movieId}/checkout/${movieDetailsId}`}>
+            <button className="custom-btn">proceed</button>
+          </a>
         </div>
       </div>
     </div>

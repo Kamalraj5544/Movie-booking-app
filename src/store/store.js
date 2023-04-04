@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore,combineReducers } from "@reduxjs/toolkit";
 
 import { bookingReducer } from "./reducers/BookingReducer";
 
@@ -10,12 +10,17 @@ const persistConfig = {
     key:"root",
     storage,
 }
-const persistorReducer= persistReducer(persistConfig,bookingReducer);
+
+const rootReducer = combineReducers({
+    booking : bookingReducer,
+})
+
+const persistedReducer= persistReducer(persistConfig,rootReducer);
 
 
  export const store = configureStore({
     reducer: {
-        persistorReducer
+        persistedReducer
     },
     devTools: process.env.NODE_ENV !== 'production',
     middleware: [thunk]

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const bookingSlice = createSlice({
-  name: "bookingState",
+  name: "booking",
   initialState: {
     selectedSeats: [],
     price: 0,
