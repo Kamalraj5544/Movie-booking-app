@@ -12,15 +12,13 @@ import "./MoviePanel.scss";
 
 const MoviePanel = () => {
   // const [movies, setMovies] = useState([]);
-  const dispatch = useDispatch();
   const {movies} = useSelector((state) => state.persistedReducer.movie)
-  console.log(movies)
+  const dispatch = useDispatch();
 
 
   useEffect(() => {
     axios.get("http://localhost:4000/api/movie").then((response) => {
       // setMovies(response.data);
-      // console.log(response.data);
       dispatch(setMovies(response.data))
     });
   }, []);
