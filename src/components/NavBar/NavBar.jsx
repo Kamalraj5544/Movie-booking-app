@@ -1,6 +1,6 @@
 import "./NavBar.scss";
 
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/BMTlogo.png";
 
 const NavBar = () => {
   return (
