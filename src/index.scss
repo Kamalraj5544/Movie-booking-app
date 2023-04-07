@@ -87,7 +87,12 @@ input::placeholder {
 .p-card-header {
   border-radius: 6px 6px 0px 0px;
   overflow: hidden;
+
+  img { 
+    vertical-align: middle;
+  }
 }
+
 
 .p-card:hover {
   .p-card-title {

@@ -7,6 +7,12 @@ import { useNavigate } from "react-router-dom";
 const CoverMD = ({ movie }) => {
   const navigate = useNavigate();
 
+  const calculateDurationFunc = (duration) => {
+    return typeof movie.duration == "number"
+      ? `${Math.floor(duration / 60)} hrs ${duration % 60} mins`
+      : duration;
+  };
+
   return (
     <section className="banner-section">
       <div className="container">
@@ -38,7 +44,9 @@ const CoverMD = ({ movie }) => {
                 <span className="pi pi-calendar"></span> {movie.dateOfRelease}
               </span>
               <span className="duration">
-                <span className="pi pi-clock"></span> {movie.duration} mins
+                <span className="pi pi-clock"></span> {
+                  calculateDurationFunc(movie.duration)
+                }
               </span>
             </div>
           </div>

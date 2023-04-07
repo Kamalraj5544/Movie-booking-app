@@ -12,15 +12,25 @@ import "./MoviePanel.scss";
 
 const MoviePanel = () => {
   // const [movies, setMovies] = useState([]);
-  const {movies} = useSelector((state) => state.persistedReducer.movie)
+  const { movies } = useSelector((state) => state.persistedReducer.movie);
   const dispatch = useDispatch();
 
+  const { innerWidth } = window;
+
+  const [windowWidth, setwindowWidth] = useState(innerWidth);
 
   useEffect(() => {
     axios.get("http://localhost:4000/api/movie").then((response) => {
       // setMovies(response.data);
-      dispatch(setMovies(response.data))
+      dispatch(setMovies(response.data));
     });
+
+    function handleResize() {
+      setwindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -43,7 +53,9 @@ const MoviePanel = () => {
           {movies &&
             movies.map((movie) => (
               <div
-                className="col-md-3 moviecard"
+                className={`moviecard col-md-${
+                  windowWidth <= 792 ? "5" : windowWidth <= 992 ? "4" : "3"
+                }`}
                 key={movie._id}
                 onClick={() => dispatch(setMovieIdFunc(movie._id))}
               >
