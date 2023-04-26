@@ -2,10 +2,13 @@ import "./NavBar.scss";
 
 import logo from "../../assets/BMTlogo.png";
 
+import { useNavigate } from "react-router-dom";
+
 const NavBar = () => {
+  const navigate = useNavigate();
   return (
     <div className="header-section">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-bg">
+      <nav className="navbar navbar-expand-lg  navbar-bg">
         <div className="container">
           <a className="navbar-brand" href="/">
             <img
@@ -33,16 +36,27 @@ const NavBar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#search-section">
-                  Search
+              <a href="/" onClick={() => navigate("/")}>
+                  <a className="nav-link" href="#movies-section">
+                    Movies
+                  </a>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#movies-section">Movies</a>
+                
+                <a href="/" onClick={() => navigate("/")}>
+                  <a className="nav-link" href="#search-section">
+                    Search
+                  </a>
+                </a>
               </li>
             </ul>
             <div className="d-grid d-md-flex">
-              <a className="btn me-md-2 custom-btn" type="button" href="/signup">
+              <a
+                className="btn me-md-2 custom-btn"
+                type="button"
+                href="/signup"
+              >
                 JOIN US
               </a>
             </div>
