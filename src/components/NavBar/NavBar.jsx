@@ -57,7 +57,7 @@ const NavBar = () => {
                 type="button"
                 href="/signup"
               >
-                JOIN US
+                join us
               </a>
             </div>
           </div>
