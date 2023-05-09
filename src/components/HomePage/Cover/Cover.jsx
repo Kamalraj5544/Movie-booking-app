@@ -23,7 +23,7 @@ const Cover = () => {
                   .typeString("RELAIBLE TICKETING")
                   .pause(3000)
                   .deleteAll()
-                  .typeString("Safe,Secure,Reliable Ticketing")
+                  .typeString("SAFE,SECURE,RELAIBLE TICKETING")
                   .start();
               }}
             />
